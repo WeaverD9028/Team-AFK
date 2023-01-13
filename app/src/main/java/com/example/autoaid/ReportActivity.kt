@@ -1,4 +1,8 @@
 package com.example.autoaid
 
-class ReportActivity {
+
+
+
+class ReportActivity(){
+
 }
