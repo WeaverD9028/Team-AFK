@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "581006740421",
+    "project_id": "autoaid-dfdd4",
+    "storage_bucket": "autoaid-dfdd4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:581006740421:android:fea13701d39f488145d9ac",
+        "android_client_info": {
+          "package_name": "com.example.autoaid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "581006740421-mpgn58k6ejp51bqfjaigqqq2ngt8kd85.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPi-l-ZTRfx0y0CZG8HZc39GX6-sqmdrk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "581006740421-mpgn58k6ejp51bqfjaigqqq2ngt8kd85.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
