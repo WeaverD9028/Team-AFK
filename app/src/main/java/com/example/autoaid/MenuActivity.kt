@@ -3,11 +3,16 @@ package com.example.autoaid
 import android.app.Notification.Action
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.content.Intent
+import android.view.View
+import kotlinx.android.synthetic.main.activity_menu.*
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
+
 
 class MenuActivity : AppCompatActivity() {
 
@@ -16,6 +21,14 @@ class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
+
+        button2.setOnClickListener {
+            Intent(this, SymptomsActivity::class.java).also {
+                startActivity(it)
+
+            }
+        }
+
 
         val drawerLayout : DrawerLayout = findViewById(R.id.drawerLayout)
         val navView : NavigationView = findViewById(R.id.nav_view)
@@ -51,6 +64,7 @@ class MenuActivity : AppCompatActivity() {
             return true
         }
         return super.onOptionsItemSelected(item)
+
 
     }
 
