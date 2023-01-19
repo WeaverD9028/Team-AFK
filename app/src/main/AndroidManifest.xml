@@ -26,6 +26,7 @@
                 android:value="" />
         </activity>
         <activity android:name=".SymptomsActivity"/>
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".SignupActivity"></activity>
     </application>
-
 </manifest>
