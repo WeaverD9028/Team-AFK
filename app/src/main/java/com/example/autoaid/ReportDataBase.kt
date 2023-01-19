@@ -15,7 +15,6 @@ class ReportDataBase(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         private const val DATABASE_VERSION = 1
         private const val DATABASE_NAME = "VehicleDatabase"
         private const val TABLE_CONTACTS = "VehicleTable"
-        // 40.38
         private const val KEY_ID = "_id"
         private const val KEY_MAKE = "make"
         private const val KEY_MODEL = "model"
@@ -28,7 +27,7 @@ class ReportDataBase(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         val CREATE_CONTACTS_TABLE = ("CREATE TABLE " + TABLE_CONTACTS
                 + "(" + KEY_ID + " TEXT PRIMARY KEY," + KEY_MAKE + " TEXT,"
                 + KEY_MODEL + " TEXT,"
-                + KEY_YEAR + " INTEGER" + ")")
+                + KEY_YEAR + " TEXT" + ")")
         db?.execSQL(CREATE_CONTACTS_TABLE)
 
     }
@@ -81,14 +80,14 @@ class ReportDataBase(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         var id : String
         var make: String
         var model: String
-        var year: Int
+        var year: String
 
         if(cursor.moveToFirst()){
             do {
                 id = cursor.getString(cursor.getColumnIndexOrThrow(KEY_ID))
                 make = cursor.getString(cursor.getColumnIndexOrThrow(KEY_MAKE))
                 model = cursor.getString(cursor.getColumnIndexOrThrow(KEY_MODEL))
-                year = cursor.getInt(cursor.getColumnIndexOrThrow(KEY_YEAR))
+                year = cursor.getString(cursor.getColumnIndexOrThrow(KEY_YEAR))
 
                 val veh = VehModelClass(id = id, make = make, model= model, year = year)
                 vehList.add(veh)
@@ -98,12 +97,13 @@ class ReportDataBase(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
     }
 
     // Function to update record
-    fun updateVehical(veh: VehModelClass):Int{
+    fun updateVehicle(veh: VehModelClass):Int{
         val db = this.writableDatabase
         val contentValues = ContentValues()
-        contentValues.put(KEY_MAKE, veh.make) // VehicalModelClass Make
-        contentValues.put(KEY_MODEL, veh.model) // VehicalModelClass Model
-        contentValues.put(KEY_YEAR, veh.year) // VehicalModelClass Year
+        contentValues.put(KEY_ID, veh.id) // VehicleModelClass Make
+        contentValues.put(KEY_MAKE, veh.make) // VehicleModelClass Make
+        contentValues.put(KEY_MODEL, veh.model) // VehicleModelClass Model
+        contentValues.put(KEY_YEAR, veh.year) // VehicleModelClass Year
 
         // Update Row
         val success = db.update(TABLE_CONTACTS, contentValues, KEY_ID + "=" + veh.id, null )
@@ -115,17 +115,15 @@ class ReportDataBase(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
     }
 
     // Function to delete record
-    fun deleteEmployee(veh: VehModelClass): Int{
+    fun deleteVehicle(id: String): Int{
         val db = this.writableDatabase
         val contentValues = ContentValues()
-        contentValues.put(KEY_ID, veh.id) // EmpModelClass id
+        contentValues.put(KEY_ID, id) // EmpModelClass id
         // Deleting Row
-        val success = db.delete(TABLE_CONTACTS, KEY_ID + "=" + veh.id, null)
+        val success = db.delete(TABLE_CONTACTS, "id=$id", null)
         // 2nd argument is String containing nullColumnHack
         db.close() // CLosing database connection
         return success
 
     }
-
-
 }
