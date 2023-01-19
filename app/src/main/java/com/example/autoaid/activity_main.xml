@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtIssueTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="100dp"
+        android:gravity="center_horizontal"
+        android:text="What issues does your vehicle currently have?"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spnIssues"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="@+id/txtIssueTitle"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/txtIssueTitle"
+        app:layout_constraintTop_toBottomOf="@+id/txtIssueTitle" />
+
+    <Button
+        android:id="@+id/btnIssuesContinue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:background="@color/gray"
+        android:text="CONTINUE"
+        app:layout_constraintBottom_toTopOf="@+id/btnIssuesBack"
+        app:layout_constraintEnd_toEndOf="@+id/spnIssues"
+        app:layout_constraintStart_toStartOf="@+id/spnIssues" />
+
+    <Button
+        android:id="@+id/btnIssuesBack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:background="@color/gray"
+        android:text="BACK"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnIssuesContinue"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnIssuesContinue" />
+
+    <TextView
+        android:id="@+id/txtMoreIssues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="More Issues ->"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnIssuesContinue"
+        app:layout_constraintEnd_toEndOf="@+id/btnIssuesContinue"
+        app:layout_constraintStart_toStartOf="@+id/btnIssuesContinue" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
