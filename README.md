@@ -7,3 +7,5 @@
 **Keiser** I created the functionality of the login and sign-up activities. Afterwards, I added user navigation between the main, login, and sign-up activities, then I connected the app to Firebase authentication service to handle account creation, management, and access. 
 
 **Frankie**  My tasks were working on the layout and functionality of the car selection menu page. I got the dropdown menus for the Make, Model, and Year made, but they aren't populated because we did not get our database populated with our API yet. I also got the "Continue" button that leads to the Symptoms page to function.
+
+**Dylan** Worked on the menu and buttons on the symptoms activity page. I included different car symptoms such as flat tires,noisy engine,etc. My buttons were a continue,back,and a more issues buttons.
