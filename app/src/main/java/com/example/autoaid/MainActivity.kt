@@ -3,6 +3,9 @@ package com.example.autoaid
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+
+
+
 import android.widget.Button
 import android.widget.Toast
 import android.content.Intent
@@ -23,5 +26,7 @@ class MainActivity : AppCompatActivity() {
         startActivity(Intent(this@MainActivity, LoginActivity::class.java))
         }
     }
+
+
 
 }

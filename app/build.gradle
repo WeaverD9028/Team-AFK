@@ -1,8 +1,9 @@
-plugins {
-    id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
+
+
+
     id 'kotlin-android-extensions'
     id 'com.google.gms.google-services'
+
 
 }
 
@@ -19,9 +20,13 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
+
+
     buildFeatures{
         viewBinding true
     }
+    
     buildTypes {
         release {
             minifyEnabled false
