@@ -5,23 +5,23 @@
     <string name="SQLite">SQLite Demo by Coding Delivery</string>
 
     <string-array name="Make">
-    <item>Make</item>
-    <item>item2</item>
-    <item>item3</item>
-    <item>item4</item>
+        <item>Make</item>
+        <item>item2</item>
+        <item>item3</item>
+        <item>item4</item>
     </string-array>
-<string-array name="Model">
-    <item>Model</item>
-    <item>item2</item>
-    <item>item3</item>
-    <item>item4</item>
-</string-array>
-<string-array name="Year">
-    <item>Year</item>
-    <item>item2</item>
-    <item>item3</item>
-    <item>item4</item>
-</string-array>
+    <string-array name="Model">
+        <item>Model</item>
+        <item>item2</item>
+        <item>item3</item>
+        <item>item4</item>
+    </string-array>
+    <string-array name="Year">
+        <item>Year</item>
+        <item>item2</item>
+        <item>item3</item>
+        <item>item4</item>
+    </string-array>
 
     <string name="sign_in">Sign in</string>
     <string name="username">Username</string>
@@ -31,4 +31,13 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="sign_up">Sign Up</string>
     <string name="alreadyMember">Already a member? Sign in</string>
+    <string name="title_activity_car_health">CarHealthActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>
