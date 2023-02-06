@@ -23,12 +23,9 @@ class MenuActivity : AppCompatActivity() {
         setContentView(R.layout.activity_menu)
 
         button2.setOnClickListener {
-            Intent(this, SymptomsActivity::class.java).also {
-                startActivity(it)
-
-            }
+            // Navigate to Symptoms page
+            startActivity(Intent(this@MenuActivity,SymptomsActivity::class.java))
         }
-
 
         val drawerLayout : DrawerLayout = findViewById(R.id.drawerLayout)
         val navView : NavigationView = findViewById(R.id.nav_view)
