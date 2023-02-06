@@ -13,10 +13,7 @@
         android:id="@+id/nav_reports"
         android:icon="@drawable/car_report_icon"
         android:title="Diagonistics" />
-    <item
-        android:id="@+id/nav_videos"
-        android:icon="@drawable/videoicon"
-        android:title="DIY Videos" />
+
     <item
         android:id="@+id/nav_local"
         android:icon="@drawable/wrench_icon"
