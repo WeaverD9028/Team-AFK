@@ -3,6 +3,7 @@ package com.example.autoaid
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import android.content.Intent
 import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
 
@@ -31,11 +32,16 @@ class SymptomsActivity :AppCompatActivity(){
         }
 
         cont.setOnClickListener{
-          showMessage("Clicked continue")
+            showMessage("Clicked continue")
+            // Navigate to Diagnostics page
+            startActivity(Intent(this@SymptomsActivity, Diagnostic::class.java))
+
         }
 
         back.setOnClickListener{
             showMessage("Clicked back")
+            // Navigate back to menu page
+            startActivity(Intent(this@SymptomsActivity,MenuActivity::class.java))
         }
 
 
