@@ -4,6 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.ImageButton
+import android.widget.TextView
+import org.w3c.dom.Text
+import java.text.DateFormat
+import java.util.Calendar
 import kotlin.random.Random
 
 
@@ -12,6 +16,11 @@ class Diagnostic : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_diagnostic)
 
+        // Variable for car type TextView
+        val carType: TextView = findViewById(R.id.car)
+
+        // Variable for date TextView
+        val dateBox: TextView = findViewById(R.id.date)
 
         // Variable for issue EditText
         // 1-4 multiline
@@ -40,7 +49,15 @@ class Diagnostic : AppCompatActivity() {
             // Take to video page
         }
 
-        // For demo purpose
+        // ************** For demo purpose ******************
+
+        // Variable for list of potential cars
+        val carList = arrayOf(
+            "Dodge Challenger",
+            "Corvette Z06",
+            "Hyundai Sonata",
+            "Range Rover"
+        )
         // Variable for list of potential issues
         val demoList = arrayOf(
             "Tire air leak",
@@ -49,6 +66,19 @@ class Diagnostic : AppCompatActivity() {
             "Brakes need changing",
             "Power steering fluid low"
         )
+
+        // Variable for date
+        val calendar = Calendar.getInstance().time
+        val dateFormat = DateFormat.getDateInstance(DateFormat.FULL).format(calendar).plus(" ")
+        // Variable for time
+        val timeFormat = DateFormat.getTimeInstance().format(calendar)
+        // Show the date
+        showDate(dateFormat.plus(timeFormat),dateBox)
+
+
+        // Select a random number between 0-3
+        val j: Int = Random.nextInt(0,3)
+        showCar(carList[j],carType)
 
         // Select a random integer between 1-5
         val i: Int = Random.nextInt(0, 4)
@@ -75,6 +105,7 @@ class Diagnostic : AppCompatActivity() {
 
 
     } // End of activity instance
+    // ***************** Display Functions *****************
 
         // Function that takes in an issue: String and an EditText
         // Displays the issue in the EditText, then moves to the next line
@@ -87,10 +118,22 @@ class Diagnostic : AppCompatActivity() {
         // Function that takes in a price: string and an EditText
         // Displays the price inside the EditText
         private fun showPrice(cost: String, space: EditText) {
-            val temp = "$"
-            space.setText(temp.plus(cost))
+            space.setText("$".plus(cost))
 
 
         }
+
+    // Function that takes in a car type: String and a TextView
+    // Displays the car to the screen
+    private fun showCar(carType:String,space:TextView){
+        space.text = "Vehicle: ".plus(carType)
+
+    }
+
+    // Function that takes in a date: String and a TextView
+    // Displays the current date to the screen
+    private fun showDate(date:String,space:TextView){
+        space.text = "Date: ".plus(date)
+    }
 
 } // End of class

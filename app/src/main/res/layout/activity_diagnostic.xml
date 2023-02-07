@@ -24,13 +24,21 @@
                 app:srcCompat="@drawable/wrench_icon" />
 
             <TextView
+                android:id="@+id/car"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Car Type: Mercedes "
                 android:textSize="20sp"
                 android:textAlignment="center"
                 android:textColor="@color/black"/>
 
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -55,7 +63,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="80dp"
                 android:text="Price Estimate: "
                 android:textColor="@color/black"
                 android:textSize="20sp"/>
