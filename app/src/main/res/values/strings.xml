@@ -6,21 +6,22 @@
 
     <string-array name="Make">
         <item>Make</item>
-        <item>item2</item>
-        <item>item3</item>
-        <item>item4</item>
+        <item>Chevrolet</item>
+        <item>Dodge</item>
+        <item>Ford</item>
     </string-array>
     <string-array name="Model">
         <item>Model</item>
-        <item>item2</item>
-        <item>item3</item>
-        <item>item4</item>
+        <item>Malibu</item>
+        <item>Challenger</item>
+        <item>Fusion</item>
     </string-array>
     <string-array name="Year">
         <item>Year</item>
-        <item>item2</item>
-        <item>item3</item>
-        <item>item4</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+        <item>2022</item>
     </string-array>
 
     <string-array name="Symptoms">
@@ -41,6 +42,7 @@
     <string name="alreadyMember">Already a member? Sign in</string>
     <string name="title_activity_google_maps">GoogleMapsActivity</string>
     <string name="title_activity_search_issues">SearchIssues</string>
+    <string name="title_activity_car_health">CarHealthActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
