@@ -18,6 +18,11 @@ class VehicleIssues : AppCompatActivity() {
             val Intent = Intent(this,SymptomsActivity::class.java)
             startActivity(Intent)
         }
+        val next = findViewById<Button>(R.id.button)
+        next.setOnClickListener() {
+            val Intent = Intent(this,Diagnostic::class.java)
+            startActivity(Intent)
+        }
     }
 }
 
