@@ -34,9 +34,9 @@ class SymptomsActivity :AppCompatActivity(){
             spinner.adapter = adapter
         }
 
-        /*cont.setOnClickListener{
+        cont.setOnClickListener{
           showMessage("Clicked continue")
-        }*/
+        }
 
         back.setOnClickListener{
             showMessage("Clicked back")

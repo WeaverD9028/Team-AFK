@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this@MainActivity,"Going to login page",Toast.LENGTH_LONG).show()
 
         // Take to the login page
-        startActivity(Intent(this@MainActivity, LoginActivity::class.java))
+        startActivity(Intent(this@MainActivity, Diagnostic::class.java))
         }
     }
 
