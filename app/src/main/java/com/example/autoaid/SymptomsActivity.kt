@@ -34,13 +34,14 @@ class SymptomsActivity :AppCompatActivity(){
             spinner.adapter = adapter
         }
 
+
         /*cont.setOnClickListener{
           showMessage("Clicked continue")
         }*/
 
-        back.setOnClickListener{
+        /*back.setOnClickListener{
             showMessage("Clicked back")
-        }
+        }*/
 
         val back1 = findViewById<Button>(R.id.btnBack)
         back1.setOnClickListener() {
