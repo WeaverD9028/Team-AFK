@@ -13,6 +13,7 @@
         android:layout_marginTop="53dp"
         android:layout_marginEnd="150dp"
         android:text="Vehicle Maintainence"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/carHealthTitle" />
 
@@ -20,7 +21,7 @@
         android:id="@+id/tableLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
+        android:gravity="center_horizontal|center_vertical"
         tools:layout_editor_absoluteX="157dp"
         tools:layout_editor_absoluteY="287dp">
 
@@ -40,19 +41,19 @@
                 android:text="Oil Change"
                 android:textAlignment="viewStart"
                 android:textColor="#000000"
-                android:textSize="20sp"
+                android:textSize="24sp"
                 tools:text="Oil Change" />
 
             <EditText
                 android:id="@+id/oilDateText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:width="150sp"
+                android:width="175sp"
                 android:ems="10"
                 android:hint="MM/DD/YEAR"
                 android:inputType="date"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textSize="24sp" />
 
         </TableRow>
 
@@ -72,7 +73,7 @@
                 android:text="Coolant Levels"
                 android:textAlignment="textStart"
                 android:textColor="#000000"
-                android:textSize="20sp"
+                android:textSize="24sp"
                 tools:text="Coolant Levels" />
 
             <EditText
@@ -80,11 +81,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:width="150sp"
+                android:width="175sp"
                 android:ems="10"
                 android:hint="MM/DD/YEAR"
                 android:inputType="date"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textSize="24sp" />
         </TableRow>
 
         <TableRow
@@ -102,19 +104,19 @@
                 android:paddingRight="30sp"
                 android:text="Tire Pressure"
                 android:textColor="#000000"
-                android:textSize="20sp"
+                android:textSize="24sp"
                 tools:text="Tire Pressure" />
 
             <EditText
                 android:id="@+id/pressureDateText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:width="150sp"
+                android:width="175sp"
                 android:ems="10"
                 android:hint="MM/DD/YEAR"
                 android:inputType="date"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textSize="24sp" />
         </TableRow>
 
         <TableRow
@@ -133,7 +135,7 @@
                 android:text="Tire Rotation"
                 android:textAlignment="viewStart"
                 android:textColor="#000000"
-                android:textSize="20sp"
+                android:textSize="24sp"
                 tools:text="Tire Rotation" />
 
             <EditText
@@ -141,11 +143,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:width="150sp"
+                android:width="175sp"
                 android:ems="10"
                 android:hint="MM/DD/YEAR"
                 android:inputType="date"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textSize="24sp" />
         </TableRow>
 
     </TableLayout>
@@ -154,15 +157,12 @@
         android:id="@+id/carHealthTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginEnd="45dp"
         android:fontFamily="@font/warming_bold"
         android:text="Your Vehicle"
         android:textColor="#000000"
         android:textSize="60sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="870dp"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="205dp"
         tools:text="Your Vehicle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
