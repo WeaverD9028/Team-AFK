@@ -23,7 +23,7 @@
 **Frankie**:
 
 
-**Dylan**:
+**Dylan**:Created the vehicle issues page to input dates,worked on google maps api to be able to pinpoint locations of autoshops,and a search issues page to be able to search for more car related issues.
 
 
 **Daniel**:
