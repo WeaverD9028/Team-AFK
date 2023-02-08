@@ -8,30 +8,27 @@
         android:icon="@drawable/ic_baseline_home_24"
         android:title="Home"/>
 
-    <item
-        android:id="@+id/nav_message"
-        android:icon="@drawable/ic_baseline_message_24"
-        android:title="Message"/>
-
 
     <item
-        android:id="@+id/nav_delete"
-        android:icon="@drawable/ic_baseline_delete_24"
-        android:title="Delete"/>
+        android:id="@+id/nav_reports"
+        android:icon="@drawable/car_report_icon"
+        android:title="Diagonistics" />
 
     <item
-        android:id="@+id/nav_setting"
-        android:icon="@drawable/ic_baseline_settings_24"
-        android:title="Settings"/>
-
+        android:id="@+id/nav_local"
+        android:icon="@drawable/wrench_icon"
+        android:title="Local Autoshops" />
     <item android:title="Profile">
 
         <menu>
 
             <item
+                android:icon="@drawable/heart_icon"
+                android:title="Car Health" />
+            <item
                 android:id="@+id/nav_login"
                 android:icon="@drawable/ic_baseline_login_24"
-                android:title="Login"/>
+                android:title="Log Out" />
 
 
         </menu>
@@ -54,5 +51,13 @@
         </menu>
 
     </item>
+    <item
+        android:id="@+id/nav_info"
+        android:icon="@drawable/info_icon"
+        android:title="Information" />
+    <item
+        android:id="@+id/nav_setting"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="Settings" />
 
 </menu>
