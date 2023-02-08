@@ -14,7 +14,7 @@
 
 ## Sprint 2
 
-**Amiyah**:
+**Amiyah**: Created the layout for both the Settings and Car Health page, allowing the user to access the app's preferences and enter when they last had a certain type of maintenance performed on their car. User is also allowed to change their car type and information post-setup. 
 
 
 **Keiser**: Created the diagnostics template page that displays: vehicle type, date of submittal, potential issues(1 to 4), price estimate. Also, it has image buttons that will later take you to maps and diy videos pages. Finally, added navigation between all current activites to show app flow for demo.
