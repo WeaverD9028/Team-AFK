@@ -15,23 +15,14 @@
         android:theme="@style/Theme.AutoAid"
         tools:targetApi="31">
         <activity
-            android:name=".SettingsActivity"
+            android:name=".Diagnostic"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".CarHealthActivity"
-            android:exported="false"
-            android:label="@string/title_activity_car_health"
-            android:theme="@style/Theme.AutoAid.NoActionBar">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".MenuActivity"
+            android:name=".SignupActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -46,6 +37,7 @@
         <activity android:name=".SymptomsActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".SignupActivity" />
+        <activity android:name=".MenuActivity"/>
     </application>
 
 </manifest>

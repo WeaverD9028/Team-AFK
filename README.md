@@ -9,3 +9,21 @@
 **Frankie**  My tasks were working on the layout and functionality of the car selection menu page. I got the dropdown menus for the Make, Model, and Year made, but they aren't populated because we did not get our database populated with our API yet. I also got the "Continue" button that leads to the Symptoms page to function.
 
 **Dylan** Worked on the menu and buttons on the symptoms activity page. I included different car symptoms such as flat tires,noisy engine,etc. My buttons were a continue,back,and a more issues buttons.
+
+**Daniel** I created the database structure the whole app will be using to make the report of the car. I also connected a dummy API to the app just to see if the app can connect to a API.
+
+## Sprint 2
+
+**Amiyah**:
+
+
+**Keiser**: Created the diagnostics template page that displays: vehicle type, date of submittal, potential issues(1 to 4), price estimate. Also, it has image buttons that will later take you to maps and diy videos pages. Finally, added navigation between all current activites to show app flow for demo.
+
+
+**Frankie**:
+
+
+**Dylan**:
+
+
+**Daniel**:

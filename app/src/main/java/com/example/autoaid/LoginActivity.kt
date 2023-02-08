@@ -42,6 +42,7 @@ class LoginActivity : AppCompatActivity() {
                     if(it.isSuccessful){
                         Toast.makeText(this@LoginActivity,"Login successful",Toast.LENGTH_LONG).show()
                         // Navigate to the next activity
+                        startActivity(Intent(this@LoginActivity,MenuActivity::class.java))
                     }else{
                         Toast.makeText(this@LoginActivity,"Incorrect username and password. Try again",Toast.LENGTH_LONG).show()
                     }
