@@ -12,19 +12,18 @@ class VehicleIssues : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_vehicle_issues)
 
+        val cont1 = findViewById<Button>(R.id.button)
+        cont1.setOnClickListener(){
+            startActivity(Intent(this@VehicleIssues,Diagnostic::class.java))
+        }
 
         val back1 = findViewById<Button>(R.id.button3)
-        back1.setOnClickListener() {
-            val Intent = Intent(this,SymptomsActivity::class.java)
-            startActivity(Intent)
+        back1.setOnClickListener(){
+            startActivity(Intent(this@VehicleIssues,SymptomsActivity::class.java))
         }
-        val next = findViewById<Button>(R.id.button)
-        next.setOnClickListener() {
-            val Intent = Intent(this,Diagnostic::class.java)
-            startActivity(Intent)
         }
     }
-}
+
 
 
 
