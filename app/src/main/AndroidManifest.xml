@@ -37,6 +37,9 @@
         <activity android:name=".SymptomsActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".MenuActivity"/>
+        <activity android:name=".VehicleIssues"/>
+        <activity android:name=".GoogleMapsActivity"/>
+        <activity android:name=".SearchIssues"/>
     </application>
 
 </manifest>
