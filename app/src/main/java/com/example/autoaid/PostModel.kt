@@ -7,4 +7,4 @@ data class PostModel (
     val id:String? = null,
     val title: String? = null,
     val body: String? = null
-        )
+)

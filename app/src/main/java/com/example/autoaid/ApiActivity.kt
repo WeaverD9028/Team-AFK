@@ -26,6 +26,7 @@ class ApiActivity: AppCompatActivity() {
                     recyclerView.apply {
                         layoutManager =  LinearLayoutManager(this@ApiActivity)
                         adapter = PostAdapter(response.body()!!)
+                        Log.e("Data!!", "${response.body().toString()}")
                     }
                 }
             }
