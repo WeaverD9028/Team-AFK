@@ -36,13 +36,16 @@ class LoginActivity : AppCompatActivity() {
             // Make sure all fields are full
             if((user.text.toString().isBlank()) || (pass.text.toString().isBlank())){
                 Toast.makeText(this@LoginActivity,"Fill in all required fields",Toast.LENGTH_LONG).show()
-            }else{
+            }
+            else{
                 // Attempt to sign in with the given credentials
                 firebaseAuth.signInWithEmailAndPassword(user.text.toString(),pass.text.toString()).addOnCompleteListener {
                     if(it.isSuccessful){
                         Toast.makeText(this@LoginActivity,"Login successful",Toast.LENGTH_LONG).show()
                         // Navigate to the next activity
-                    }else{
+                        startActivity(Intent(this@LoginActivity,MenuActivity::class.java))
+                    }
+                    else{
                         Toast.makeText(this@LoginActivity,"Incorrect username and password. Try again",Toast.LENGTH_LONG).show()
                     }
                 }

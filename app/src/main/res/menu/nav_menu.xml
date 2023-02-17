@@ -6,50 +6,50 @@
     <item
         android:id="@+id/nav_home"
         android:icon="@drawable/ic_baseline_home_24"
-        android:title="Home"/>
+        android:title="@string/home"/>
 
 
     <item
         android:id="@+id/nav_reports"
         android:icon="@drawable/car_report_icon"
-        android:title="Diagonistics" />
+        android:title="@string/diagnostics" />
     <item
         android:id="@+id/nav_videos"
         android:icon="@drawable/videoicon"
-        android:title="DIY Videos" />
+        android:title="@string/diy_videos"/>
     <item
         android:id="@+id/nav_local"
         android:icon="@drawable/wrench_icon"
-        android:title="Local Autoshops" />
-    <item android:title="Profile">
+        android:title="@string/local_autoshops" />
+    <item android:title="@string/profile">
 
         <menu>
 
             <item
                 android:icon="@drawable/heart_icon"
-                android:title="Car Health" />
+                android:title="@string/car_health" />
             <item
                 android:id="@+id/nav_login"
                 android:icon="@drawable/ic_baseline_login_24"
-                android:title="Log Out" />
+                android:title="@string/log_out" />
 
 
         </menu>
     </item>
 
-    <item android:title="Communication">
+    <item android:title="@string/communication">
 
         <menu>
 
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_baseline_share_24"
-                android:title="Share"/>
+                android:title="@string/share"/>
 
             <item
                 android:id="@+id/nav_review"
                 android:icon="@drawable/ic_baseline_rate_review_24"
-                android:title="Rating"/>
+                android:title="@string/rating"/>
 
         </menu>
 
@@ -57,10 +57,10 @@
     <item
         android:id="@+id/nav_info"
         android:icon="@drawable/info_icon"
-        android:title="Information" />
+        android:title="@string/information" />
     <item
         android:id="@+id/nav_setting"
         android:icon="@drawable/ic_baseline_settings_24"
-        android:title="Settings" />
+        android:title="@string/settings" />
 
 </menu>
