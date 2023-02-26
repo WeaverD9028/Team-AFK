@@ -15,6 +15,13 @@
         android:theme="@style/Theme.AutoAid"
         tools:targetApi="31">
         <activity
+            android:name=".DiagnosticsLoading"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Diagnostic"
             android:exported="false">
             <meta-data
@@ -36,10 +43,10 @@
         </activity>
         <activity android:name=".SymptomsActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".MenuActivity"/>
-        <activity android:name=".VehicleIssues"/>
-        <activity android:name=".GoogleMapsActivity"/>
-        <activity android:name=".SearchIssues"/>
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".VehicleIssues" />
+        <activity android:name=".GoogleMapsActivity" />
+        <activity android:name=".SearchIssues" />
     </application>
 
 </manifest>
