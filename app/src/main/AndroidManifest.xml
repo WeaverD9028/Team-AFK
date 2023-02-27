@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <!-- Include this permission any time your app needs location information. -->
+
+
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- Include only if your app benefits from precise location access. -->
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+
+
     <application
         android:allowBackup="true"
-        android:usesCleartextTraffic="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -16,39 +26,40 @@
         android:theme="@style/Theme.AutoAid"
         tools:targetApi="31">
 
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAPS_API_KEY}" />
+        <meta-data android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
         <activity
-
+            android:name=".SavedReports"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".DiagnosticsLoading"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Diagnostic"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
-            android:name=".SignupActivity"
+            android:name=".GoogleMapsActivity"
             android:exported="true">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="">
-            </meta-data>
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".GoogleMapsActivity"
-            android:exported="false">
-        </activity>
-
-
-
-
-
-
 
 
 
@@ -57,20 +68,12 @@
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="${MAPS_API_KEY}" />
-
-
-
-
-        <activity android:name=".SymptomsActivity"/>
-        <activity android:name=".LoginActivity"></activity>
-        <activity android:name=".MenuActivity"></activity>
-        <activity android:name=".SearchIssues"></activity>
-        <activity android:name=".VehicleIssues"></activity>
-
+        </activity>
+        <activity android:name=".SymptomsActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".VehicleIssues" />
+        <activity android:name=".SearchIssues" />
     </application>
 
 </manifest>

@@ -52,4 +52,8 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_loading_animation">LoadingAnimation</string>
+    <string name="reportsEx1">Date: 12/17/2022 \nTime: 12:46:00\nReported: Squealing noises, uneasy stops\nCar: 2021 Jeep Cherokee</string>
+    <string name="reportsEx2">Date: 1/28/2022 \nTime: 5:30:12\nReported: Having trouble steering when turning the vehicle\nCar: 2021 Jeep Cherokee</string>
+    <string name="reportsEx3">Date: 10/15/2021 \nTime: 7:10:05\nReported: Car thermostat reporting high temperatures\nCar: 2005 Chevrolet Tahoe</string>
+
 </resources>
