@@ -1,5 +1,6 @@
 package com.example.autoaid
 
+import android.annotation.SuppressLint
 import android.os.Build
 import android.os.Bundle
 import android.webkit.WebView
@@ -8,6 +9,7 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 
 class YouTubeActivity : AppCompatActivity() {
+    @SuppressLint("SetJavaScriptEnabled")
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

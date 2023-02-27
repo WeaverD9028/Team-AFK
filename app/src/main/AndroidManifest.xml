@@ -31,7 +31,6 @@
         <activity android:name=".SymptomsActivity" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".MenuActivity"/>
-        <activity android:name=".YouTubeActivity"/>
     </application>
 
 </manifest>

@@ -36,8 +36,8 @@ class MenuActivity : AppCompatActivity() {
         }
 
 
-        val drawerLayout : DrawerLayout = findViewById(R.id.drawerLayout)
-        val navView : NavigationView = findViewById(R.id.nav_view)
+        val drawerLayout: DrawerLayout = findViewById(R.id.drawerLayout)
+        val navView: NavigationView = findViewById(R.id.nav_view)
 
         toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
         drawerLayout.addDrawerListener(toggle)
@@ -45,32 +45,66 @@ class MenuActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        navView.setNavigationItemSelectedListener {
+        navView.setNavigationItemSelectedListener { item ->
 
-            when(it.itemId){
+            when (item.itemId) {
 
-                R.id.nav_home -> Toast.makeText(applicationContext, "Click home", Toast.LENGTH_SHORT).show()
-                R.id.nav_view -> Toast.makeText(applicationContext, "Click view", Toast.LENGTH_SHORT).show()
-                R.id.nav_share -> Toast.makeText(applicationContext, "Click share", Toast.LENGTH_SHORT).show()
-                R.id.nav_review -> Toast.makeText(applicationContext, "Click review", Toast.LENGTH_SHORT).show()
-                R.id.nav_setting -> Toast.makeText(applicationContext, "Click setting", Toast.LENGTH_SHORT).show()
-                R.id.nav_login -> Toast.makeText(applicationContext, "Click login", Toast.LENGTH_SHORT).show()
-                R.id.nav_videos -> Toast.makeText(applicationContext, "Loading DIY Videos", Toast.LENGTH_SHORT).show()
+                R.id.nav_home -> Toast.makeText(
+                    applicationContext,
+                    "Click home",
+                    Toast.LENGTH_SHORT
+                ).show()
+                R.id.nav_view -> Toast.makeText(
+                    applicationContext,
+                    "Click view",
+                    Toast.LENGTH_SHORT
+                ).show()
+                R.id.nav_share -> Toast.makeText(
+                    applicationContext,
+                    "Click share",
+                    Toast.LENGTH_SHORT
+                ).show()
+                R.id.nav_review -> Toast.makeText(
+                    applicationContext,
+                    "Click review",
+                    Toast.LENGTH_SHORT
+                ).show()
+                R.id.nav_setting -> Toast.makeText(
+                    applicationContext,
+                    "Click setting",
+                    Toast.LENGTH_SHORT
+                ).show()
+                R.id.nav_login -> Toast.makeText(
+                    applicationContext,
+                    "Click login",
+                    Toast.LENGTH_SHORT
+                ).show()
+                R.id.nav_videos -> Toast.makeText(
+                    applicationContext,
+                    "Loading DIY Videos",
+                    Toast.LENGTH_SHORT
+                ).show()
+
             }
-
 
             true
 
 
         }
+
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
-        if(toggle.onOptionsItemSelected(item)){
+
+
+
+            override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        if(toggle.onOptionsItemSelected(item)) {
 
             return true
         }
+
         return super.onOptionsItemSelected(item)
 
 
