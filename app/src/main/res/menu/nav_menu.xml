@@ -6,52 +6,47 @@
     <item
         android:id="@+id/nav_home"
         android:icon="@drawable/ic_baseline_home_24"
-        android:title="@string/home"/>
+        android:title="Home"/>
 
 
     <item
         android:id="@+id/nav_reports"
         android:icon="@drawable/car_report_icon"
-
-        android:title="@string/diagnostics" />
-    <item
-        android:id="@+id/nav_videos"
-        android:icon="@drawable/videoicon"
-        android:title="@string/diy_videos"/>
+        android:title="Diagonistics" />
 
     <item
         android:id="@+id/nav_local"
         android:icon="@drawable/wrench_icon"
-        android:title="@string/local_autoshops" />
-    <item android:title="@string/profile">
+        android:title="Local Autoshops" />
+    <item android:title="Profile">
 
         <menu>
 
             <item
                 android:icon="@drawable/heart_icon"
-                android:title="@string/car_health" />
+                android:title="Car Health" />
             <item
                 android:id="@+id/nav_login"
                 android:icon="@drawable/ic_baseline_login_24"
-                android:title="@string/log_out" />
+                android:title="Log Out" />
 
 
         </menu>
     </item>
 
-    <item android:title="@string/communication">
+    <item android:title="Communication">
 
         <menu>
 
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_baseline_share_24"
-                android:title="@string/share"/>
+                android:title="Share"/>
 
             <item
                 android:id="@+id/nav_review"
                 android:icon="@drawable/ic_baseline_rate_review_24"
-                android:title="@string/rating"/>
+                android:title="Rating"/>
 
         </menu>
 
@@ -59,10 +54,10 @@
     <item
         android:id="@+id/nav_info"
         android:icon="@drawable/info_icon"
-        android:title="@string/information" />
+        android:title="Information" />
     <item
         android:id="@+id/nav_setting"
         android:icon="@drawable/ic_baseline_settings_24"
-        android:title="@string/settings" />
+        android:title="Settings" />
 
 </menu>
