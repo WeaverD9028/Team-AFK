@@ -13,7 +13,9 @@ import com.example.autoaid.databinding.FragmentSecondBinding
  */
 class SecondFragment : Fragment() {
 
+
 private var _binding: FragmentSecondBinding? = null
+
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
@@ -35,7 +37,9 @@ private var _binding: FragmentSecondBinding? = null
             findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
         }
     }
+
 override fun onDestroyView() {
+
         super.onDestroyView()
         _binding = null
     }
