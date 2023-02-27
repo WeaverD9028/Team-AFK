@@ -9,7 +9,6 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_symptoms.*
 
 class SymptomsActivity :AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +20,7 @@ class SymptomsActivity :AppCompatActivity(){
         // Create button variables linked to xml
         val cont: Button = findViewById(R.id.btnCont)
         val back: Button = findViewById(R.id.btnBack)
-        val more = findViewById<TextView>(R.id.btnUnfold)
+
 
 
 
@@ -44,23 +43,26 @@ class SymptomsActivity :AppCompatActivity(){
             showMessage("Clicked back")
         }*/
 
-
-
-    cont.setOnClickListener(){
-        startActivity(Intent(this@SymptomsActivity,VehicleIssues::class.java))
-    }
-        back.setOnClickListener(){
-            startActivity(Intent(this@SymptomsActivity,MenuActivity::class.java))
+        val back1 = findViewById<Button>(R.id.btnBack)
+        back1.setOnClickListener() {
+            val Intent = Intent(this,MenuActivity::class.java)
+            startActivity(Intent)
         }
-    more.setOnClickListener(){
-        startActivity(Intent(this@SymptomsActivity,SearchIssues::class.java))
-    }
 
-    button4.setOnClickListener(){
-        startActivity(Intent(this@SymptomsActivity,SavedReports::class.java))
-    }
+        val issues = findViewById<TextView>(R.id.btnUnfold)
+        issues.setOnClickListener() {
+            val Intent = Intent(this,SearchIssues::class.java)
+            startActivity(Intent)
+        }
 
-    }
+
+        val cont1 = findViewById<Button>(R.id.btnCont)
+        cont1.setOnClickListener() {
+            val Intent = Intent(this,VehicleIssues::class.java)
+            startActivity(Intent)
+        }
+
+        }
     private fun showMessage(msg: String) {
         // pop up a short message on the bottom of the screen
         Toast.makeText(this@SymptomsActivity, msg, Toast.LENGTH_SHORT).show()
