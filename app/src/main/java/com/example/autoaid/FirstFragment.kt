@@ -13,9 +13,7 @@ import com.example.autoaid.databinding.FragmentFirstBinding
  */
 class FirstFragment : Fragment() {
 
-
 private var _binding: FragmentFirstBinding? = null
-
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
@@ -25,9 +23,8 @@ private var _binding: FragmentFirstBinding? = null
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentFirstBinding.inflate(inflater, container, false)
-        return binding.root
-
+      _binding = FragmentFirstBinding.inflate(inflater, container, false)
+      return binding.root
 
     }
 
@@ -39,9 +36,7 @@ private var _binding: FragmentFirstBinding? = null
         }
     }
 
-
 override fun onDestroyView() {
-
         super.onDestroyView()
         _binding = null
     }
