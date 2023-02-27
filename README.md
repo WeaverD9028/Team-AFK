@@ -14,19 +14,19 @@
 
 ## Sprint 2
 
-**Amiyah**:
+**Amiyah**: Created the layout for both the Settings and Car Health page, allowing the user to access the app's preferences and enter when they last had a certain type of maintenance performed on their car. User is also allowed to change their car type and information post-setup. 
 
 
 **Keiser**: Created the diagnostics template page that displays: vehicle type, date of submittal, potential issues(1 to 4), price estimate. Also, it has image buttons that will later take you to maps and diy videos pages. Finally, added navigation between all current activites to show app flow for demo.
 
 
-**Frankie**:
+**Frankie**:I was tasked with creating the DIY Video activity created. The first days I did research on using the youtube api and next I had to create the activity itself but i ran into trouble with Android Studio itself. I had to run many updates after reinstalling Android Studio and it finally worked. While waiting I had already typed up the code in notepad but once trying to merge that code with the activity on Android Studio I had many errors.
 
 
-**Dylan**:
+**Dylan**:Created the vehicle issues page to input dates,worked on google maps api to be able to pinpoint locations of autoshops,and a search issues page to be able to search for more car related issues.
 
+**Daniel**: Connnected our app to the API to connect populated the database and get car infomation like year, make, model. Also can get engine types maintance details and more infomation.
 
-**Daniel**:
 
 ## Sprint 3
 
