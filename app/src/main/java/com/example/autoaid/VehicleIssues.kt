@@ -14,7 +14,7 @@ class VehicleIssues : AppCompatActivity() {
 
         val cont1 = findViewById<Button>(R.id.button)
         cont1.setOnClickListener(){
-            startActivity(Intent(this@VehicleIssues,Diagnostic::class.java))
+            startActivity(Intent(this@VehicleIssues,DiagnosticsLoading::class.java))
         }
 
         val back1 = findViewById<Button>(R.id.button3)

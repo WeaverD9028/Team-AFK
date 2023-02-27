@@ -27,3 +27,19 @@
 
 
 **Daniel**:
+
+## Sprint 3
+
+**Amiyah**:
+
+
+**Keiser**: Created the diagnostics loading activity that will be displayed for 10 seconds before showing the user a diagnostic report. Also, created  the saved reports activity that will store previously filed diagnostics reports. The individual reports are clickable and take you back to diagnostic page for now. 
+
+
+**Frankie**:
+
+
+**Dylan**:
+
+
+**Daniel**:

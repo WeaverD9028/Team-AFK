@@ -32,6 +32,20 @@
         <meta-data android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version"/>
         <activity
+            android:name=".SavedReports"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".DiagnosticsLoading"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Diagnostic"
             android:exported="false">
             <meta-data
@@ -57,9 +71,10 @@
         </activity>
         <activity android:name=".SymptomsActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".MenuActivity"/>
-        <activity android:name=".VehicleIssues"/>
-        <activity android:name=".SearchIssues"/>
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".VehicleIssues" />
+        <activity android:name=".GoogleMapsActivity" />
+        <activity android:name=".SearchIssues" />
     </application>
 
 </manifest>
