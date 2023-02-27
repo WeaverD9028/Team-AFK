@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CarHealthActivity">
+
+    <TextView
+        android:id="@+id/maintenanceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="150dp"
+        android:text="Vehicle Maintainence"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/carHealthTitle" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal|center_vertical"
+        tools:layout_editor_absoluteX="157dp"
+        tools:layout_editor_absoluteY="287dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/oilChangeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/warming_semibold"
+                android:paddingRight="30sp"
+                android:text="Oil Change"
+                android:textAlignment="viewStart"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                tools:text="Oil Change" />
+
+            <EditText
+                android:id="@+id/oilDateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="175sp"
+                android:ems="10"
+                android:hint="MM/DD/YEAR"
+                android:inputType="date"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/coolantText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/warming_semibold"
+                android:paddingRight="30sp"
+                android:text="Coolant Levels"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                tools:text="Coolant Levels" />
+
+            <EditText
+                android:id="@+id/coolantDateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:width="175sp"
+                android:ems="10"
+                android:hint="MM/DD/YEAR"
+                android:inputType="date"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/pressureChangeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/warming_semibold"
+                android:paddingRight="30sp"
+                android:text="Tire Pressure"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                tools:text="Tire Pressure" />
+
+            <EditText
+                android:id="@+id/pressureDateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="175sp"
+                android:ems="10"
+                android:hint="MM/DD/YEAR"
+                android:inputType="date"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/rotationText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/warming_semibold"
+                android:paddingRight="30sp"
+                android:text="Tire Rotation"
+                android:textAlignment="viewStart"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                tools:text="Tire Rotation" />
+
+            <EditText
+                android:id="@+id/rotationDateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:width="175sp"
+                android:ems="10"
+                android:hint="MM/DD/YEAR"
+                android:inputType="date"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/carHealthTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/warming_bold"
+        android:text="Your Vehicle"
+        android:textColor="#000000"
+        android:textSize="60sp"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="205dp"
+        tools:text="Your Vehicle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

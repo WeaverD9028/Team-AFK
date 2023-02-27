@@ -12,11 +12,13 @@
     <item
         android:id="@+id/nav_reports"
         android:icon="@drawable/car_report_icon"
+
         android:title="@string/diagnostics" />
     <item
         android:id="@+id/nav_videos"
         android:icon="@drawable/videoicon"
         android:title="@string/diy_videos"/>
+
     <item
         android:id="@+id/nav_local"
         android:icon="@drawable/wrench_icon"
