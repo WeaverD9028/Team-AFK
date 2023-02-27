@@ -44,6 +44,8 @@ class SymptomsActivity :AppCompatActivity(){
             showMessage("Clicked back")
         }*/
 
+
+
     cont.setOnClickListener(){
         startActivity(Intent(this@SymptomsActivity,VehicleIssues::class.java))
     }
@@ -53,7 +55,12 @@ class SymptomsActivity :AppCompatActivity(){
     more.setOnClickListener(){
         startActivity(Intent(this@SymptomsActivity,SearchIssues::class.java))
     }
-        }
+
+    button4.setOnClickListener(){
+        startActivity(Intent(this@SymptomsActivity,SavedReports::class.java))
+    }
+
+    }
     private fun showMessage(msg: String) {
         // pop up a short message on the bottom of the screen
         Toast.makeText(this@SymptomsActivity, msg, Toast.LENGTH_SHORT).show()
