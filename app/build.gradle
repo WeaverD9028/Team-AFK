@@ -55,6 +55,15 @@ dependencies {
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
 
+
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+    implementation("androidx.activity:activity-ktx:1.6.1")
+    implementation("androidx.fragment:fragment-ktx:1.5.5")
+    implementation("androidx.coordinatorlayout:coordinatorlayout:1.2.0")
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
@@ -68,7 +77,11 @@ dependencies {
     // Retrofit with Moshi Converter
     implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
 
+
     implementation files('libs/YouTubeAndroidPlayerApi.jar')
 
+
+    //Gif implementation
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.25'
 
 }

@@ -13,7 +13,8 @@ import com.example.autoaid.databinding.FragmentSecondBinding
  */
 class SecondFragment : Fragment() {
 
-    private var _binding: FragmentSecondBinding? = null
+
+private var _binding: FragmentSecondBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -24,8 +25,8 @@ class SecondFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentSecondBinding.inflate(inflater, container, false)
-        return binding.root
+      _binding = FragmentSecondBinding.inflate(inflater, container, false)
+      return binding.root
 
     }
 
@@ -37,7 +38,8 @@ class SecondFragment : Fragment() {
         }
     }
 
-    override fun onDestroyView() {
+override fun onDestroyView() {
+
         super.onDestroyView()
         _binding = null
     }

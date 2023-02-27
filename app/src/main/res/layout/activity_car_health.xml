@@ -7,23 +7,28 @@
     tools:context=".CarHealthActivity">
 
     <TextView
-        android:id="@+id/maintenanceText"
+        android:id="@+id/carHealthTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="53dp"
-        android:layout_marginEnd="150dp"
-        android:text="Vehicle Maintainence"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/carHealthTitle" />
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="171dp"
+        android:fontFamily="@font/warming_bold"
+        android:text="Your Vehicle"
+        android:textColor="#000000"
+        android:textSize="60sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Your Vehicle" />
 
     <TableLayout
         android:id="@+id/tableLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:gravity="center_horizontal|center_vertical"
-        tools:layout_editor_absoluteX="157dp"
-        tools:layout_editor_absoluteY="287dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TableRow
             android:layout_width="match_parent"
@@ -154,15 +159,15 @@
     </TableLayout>
 
     <TextView
-        android:id="@+id/carHealthTitle"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="232dp"
         android:fontFamily="@font/warming_bold"
-        android:text="Your Vehicle"
-        android:textColor="#000000"
-        android:textSize="60sp"
-        tools:layout_editor_absoluteX="81dp"
-        tools:layout_editor_absoluteY="205dp"
-        tools:text="Your Vehicle" />
+        android:text="Please enter a valid vehicle date."
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
