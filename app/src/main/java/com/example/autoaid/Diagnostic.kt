@@ -6,6 +6,7 @@ import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
 import org.w3c.dom.Text
+import android.content.Intent
 import java.text.DateFormat
 import java.util.Calendar
 import kotlin.random.Random
@@ -41,6 +42,7 @@ class Diagnostic : AppCompatActivity() {
         // If you click the location button
         location.setOnClickListener {
             // Take to location page
+            startActivity(Intent(this@Diagnostic,GoogleMapsActivity::class.java))
         }
 
 
