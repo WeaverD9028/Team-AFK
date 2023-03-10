@@ -12,103 +12,100 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/yeartxt"
-            android:layout_width="142dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="138dp"
-            android:layout_marginBottom="32dp"
-            android:autofillHints="2023"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="@string/year"
-            app:layout_constraintBottom_toTopOf="@+id/button2"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="LabelFor" />
+        <Spinner
+            android:id="@+id/spinner4"
+            android:layout_width="114dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="244dp"
+            android:entries="@array/Make"
+            android:spinnerMode="dropdown"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/spinner3"
+            app:layout_constraintStart_toStartOf="parent" />
 
-        <EditText
-            android:id="@+id/modeltxt"
-            android:layout_width="142dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="132dp"
-            android:layout_marginEnd="137dp"
-            android:layout_marginBottom="38dp"
-            android:autofillHints="Mustang"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="@string/model"
-            app:layout_constraintBottom_toTopOf="@+id/yeartxt"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.492"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="LabelFor" />
+        <Spinner
+            android:id="@+id/spinner3"
+            android:layout_width="114dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="244dp"
+            android:entries="@array/Model"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/spinner"
+            app:layout_constraintHorizontal_bias="0.458"
+            app:layout_constraintStart_toEndOf="@+id/spinner4" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="338dp"
             android:layout_height="77dp"
             android:layout_marginTop="38dp"
-            android:text="@string/tell_us_about_your_vehicle"
+            android:layout_marginBottom="335dp"
+            android:text="Tell Us About Your Vehicle!"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="26sp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.058" />
 
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="114dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="244dp"
+            android:entries="@array/Year"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/spinner3" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="97dp"
             android:layout_height="101dp"
-            android:layout_marginStart="88dp"
-            android:layout_marginTop="76dp"
-            android:text="@string/you_drive_a"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="104dp"
+            android:layout_marginBottom="192dp"
+            android:text="You Drive a........"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintBottom_toTopOf="@+id/spinner4"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.217"
             tools:text="You Drive a......." />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="196dp"
-            android:layout_height="75dp"
+            android:layout_height="62dp"
             android:layout_marginStart="156dp"
             android:layout_marginEnd="145dp"
-            android:layout_marginBottom="48dp"
+            android:layout_marginBottom="108dp"
             android:text="Continue"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.534"
+            app:layout_constraintHorizontal_bias="0.569"
             app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="76dp"
-            android:layout_marginEnd="48dp"
+            android:layout_marginTop="93dp"
+            android:layout_marginEnd="76dp"
+            android:layout_marginBottom="72dp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2"
-            app:srcCompat="@drawable/blankcar"
-            android:contentDescription="@string/vehicle" />
-
-        <EditText
-            android:id="@+id/maketxt"
-            android:layout_width="142dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="128dp"
-            android:layout_marginEnd="141dp"
-            android:layout_marginBottom="35dp"
-            android:autofillHints="Ford"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="@string/make"
-            app:layout_constraintBottom_toTopOf="@+id/modeltxt"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.553"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="LabelFor" />
+            app:layout_constraintVertical_bias="0.3"
+            app:srcCompat="@drawable/blankcar" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

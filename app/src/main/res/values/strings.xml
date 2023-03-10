@@ -6,21 +6,30 @@
 
     <string-array name="Make">
         <item>Make</item>
-        <item>item2</item>
-        <item>item3</item>
-        <item>item4</item>
+        <item>Chevrolet</item>
+        <item>Dodge</item>
+        <item>Ford</item>
     </string-array>
     <string-array name="Model">
         <item>Model</item>
-        <item>item2</item>
-        <item>item3</item>
-        <item>item4</item>
+        <item>Malibu</item>
+        <item>Challenger</item>
+        <item>Fusion</item>
     </string-array>
     <string-array name="Year">
         <item>Year</item>
-        <item>item2</item>
-        <item>item3</item>
-        <item>item4</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+        <item>2022</item>
+    </string-array>
+
+    <string-array name="Symptoms">
+        <item>None</item>
+        <item>Flat Tires</item>
+        <item>Car Will Not Start</item>
+        <item>Noisy Engine</item>
+        <item>Shaky Steering Wheel</item>
     </string-array>
 
     <string name="sign_in">Sign in</string>
@@ -31,9 +40,9 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="sign_up">Sign Up</string>
     <string name="alreadyMember">Already a member? Sign in</string>
-    <string name="title_activity_youtube">YoutubeActivity</string>
-
-
+    <string name="title_activity_google_maps">GoogleMapsActivity</string>
+    <string name="title_activity_search_issues">SearchIssues</string>
+    <string name="title_activity_car_health">CarHealthActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -42,23 +51,9 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="car_health">Car Health</string>
-    <string name="profile">Profile</string>
-    <string name="local_autoshops">Local Autoshops</string>
-    <string name="diy_videos">DIY Videos</string>
-    <string name="diagonistics">Diagonistics</string>
-    <string name="home">Home</string>
-    <string name="log_out">Log Out</string>
-    <string name="communication">Communication</string>
-    <string name="share">Share</string>
-    <string name="rating">Rating</string>
-    <string name="information">Information</string>
-    <string name="settings">Settings</string>
-    <string name="diagnostics">diagnostics</string>
-    <string name="year">Year</string>
-    <string name="model">Model</string>
-    <string name="make">Make</string>
-    <string name="tell_us_about_your_vehicle">Tell Us About Your Vehicle!</string>
-    <string name="you_drive_a">You Drive a........</string>
-    <string name="vehicle">Vehicle</string>
+    <string name="title_activity_loading_animation">LoadingAnimation</string>
+    <string name="reportsEx1">Date: 12/17/2022 \nTime: 12:46:00\nReported: Squealing noises, uneasy stops\nCar: 2021 Jeep Cherokee</string>
+    <string name="reportsEx2">Date: 1/28/2022 \nTime: 5:30:12\nReported: Having trouble steering when turning the vehicle\nCar: 2021 Jeep Cherokee</string>
+    <string name="reportsEx3">Date: 10/15/2021 \nTime: 7:10:05\nReported: Car thermostat reporting high temperatures\nCar: 2005 Chevrolet Tahoe</string>
+
 </resources>
