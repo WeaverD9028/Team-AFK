@@ -74,6 +74,7 @@
         <activity android:name=".MenuActivity" />
         <activity android:name=".VehicleIssues" />
         <activity android:name=".SearchIssues" />
+        <activity android:name=".YouTubeActivity" />
         <activity android:name=".GoogleMapsActivity" />
     </application>
 
