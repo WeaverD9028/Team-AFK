@@ -53,7 +53,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".GoogleMapsActivity"
+            android:name=".SignupActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -74,6 +74,7 @@
         <activity android:name=".MenuActivity" />
         <activity android:name=".VehicleIssues" />
         <activity android:name=".SearchIssues" />
+        <activity android:name=".GoogleMapsActivity" />
     </application>
 
 </manifest>
