@@ -61,4 +61,5 @@
     <string name="tell_us_about_your_vehicle">Tell Us About Your Vehicle!</string>
     <string name="you_drive_a">You Drive a........</string>
     <string name="vehicle">Vehicle</string>
+    <string name="Vin">Vin</string>
 </resources>

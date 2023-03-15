@@ -12,37 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/yeartxt"
-            android:layout_width="142dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="138dp"
-            android:layout_marginBottom="32dp"
-            android:autofillHints="2023"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="@string/year"
-            app:layout_constraintBottom_toTopOf="@+id/button2"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="LabelFor" />
-
-        <EditText
-            android:id="@+id/modeltxt"
-            android:layout_width="142dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="132dp"
-            android:layout_marginEnd="137dp"
-            android:layout_marginBottom="38dp"
-            android:autofillHints="Mustang"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="@string/model"
-            app:layout_constraintBottom_toTopOf="@+id/yeartxt"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.492"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="LabelFor" />
-
         <TextView
             android:id="@+id/textView2"
             android:layout_width="338dp"
@@ -94,19 +63,19 @@
             android:contentDescription="@string/vehicle" />
 
         <EditText
-            android:id="@+id/maketxt"
-            android:layout_width="142dp"
+            android:id="@+id/Vintxt"
+            android:layout_width="250dp"
             android:layout_height="50dp"
             android:layout_marginStart="128dp"
             android:layout_marginEnd="141dp"
-            android:layout_marginBottom="35dp"
+            android:layout_marginBottom="44dp"
             android:autofillHints="Ford"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="@string/make"
-            app:layout_constraintBottom_toTopOf="@+id/modeltxt"
+            android:text="@string/Vin"
+            app:layout_constraintBottom_toTopOf="@+id/button2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.553"
+            app:layout_constraintHorizontal_bias="0.444"
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="LabelFor" />
 
