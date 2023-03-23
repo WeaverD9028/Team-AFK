@@ -12,7 +12,7 @@ class DiagnosticsLoading : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_diagnostics_loading)
 
-        val timer = object: CountDownTimer(10000, 1000) {
+        val timer = object: CountDownTimer(5000, 1000) {
             override fun onTick(millisUntilFinished: Long) {}
 
             override fun onFinish() {
