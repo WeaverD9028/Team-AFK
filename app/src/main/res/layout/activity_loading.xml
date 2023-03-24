@@ -21,7 +21,7 @@
       android:textStyle="bold" />
 
   //load gif insertion
-
+  
   <pl.droidsonroids.gif.GifImageView
       android:id="@+id/carLoadGif"
       android:layout_width="match_parent"

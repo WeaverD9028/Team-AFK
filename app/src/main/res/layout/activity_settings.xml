@@ -90,12 +90,12 @@
             android:layout_marginTop="64dp"
             android:layout_marginEnd="166dp"
             android:layout_marginBottom="7dp"
-            android:tint="#40C4FF"
             app:layout_constraintBottom_toTopOf="@+id/settingTitle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_settings_24" />
+            app:srcCompat="@drawable/ic_baseline_settings_24"
+            app:tint="#40C4FF" />
 
         <TextView
             android:id="@+id/settingTitle"

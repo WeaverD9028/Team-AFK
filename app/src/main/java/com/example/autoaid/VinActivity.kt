@@ -1,77 +1,58 @@
 package com.example.autoaid
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import org.json.JSONObject
-import java.io.BufferedReader
-import java.io.InputStreamReader
-import java.net.HttpURLConnection
-import java.net.URL
+import kotlinx.android.synthetic.main.activity_diagnostic.*
 
 class VinActivity : AppCompatActivity() {
-
-    lateinit var textinput : EditText
-    lateinit var btnout : Button
+    // creating variables for our edittext, button and dbhandler
+    private lateinit var carVinEdt : EditText
+    private lateinit var addCarBtn : Button
+    private lateinit var readCarbtn : Button
+    private lateinit var dbHandler: DBHandler
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_vin)
 
-        textinput = findViewById(R.id.textInput)
-        btnout = findViewById(R.id.btnOut)
+        // initializing all our variables.
+        carVinEdt = findViewById(R.id.idEdtVin)
+        addCarBtn = findViewById(R.id.idBtnAddCar)
+        readCarbtn = findViewById(R.id.idBtnReadCars)
 
-        btnout.setOnClickListener{
-            buttonClick().start()
-        }
-        // fetchCarData().start()
+        // creating a new dbhandler class
+        // and passing our context to it.
+        dbHandler = DBHandler(this@VinActivity)
 
-        // findViewById<TextView>(R.id.txtbox).text
-
-
-
+        // below line is to add on click listener for our add course button.
+        addCarBtn.setOnClickListener(View.OnClickListener { // below line is to get data from all edit text fields.
+            val carVin  = carVinEdt.getText().toString()
 
 
-
-    }
-
-    fun buttonClick(): Thread{
-        println(textinput.text)
-        // 1GNALDEK9FZ108495
-
-        return Thread {
-
-            val url = "https://api.carmd.com/v3.0/decode?vin=" + textinput.text
-            val obj = URL(url)
-            val con = obj.openConnection() as HttpURLConnection
-            // optional default is GET
-            con.requestMethod = "GET"
-            //add request header
-            con.setRequestProperty("Content-Type", "application/json")
-            con.setRequestProperty("Authorization", "Basic ZjhjODkwN2MtOWRkMy00ZjkzLWIxM2MtZGIyZTM2NTlhMzFk")
-            con.setRequestProperty("partner-token", "db6ef5ce8fd14fcd808057ae6f4c001e")
-            val responseCode = con.responseCode
-            println("\nSending 'GET' request to URL : $url")
-            println("Response Code : $responseCode")
-            val `in` = BufferedReader(
-                InputStreamReader(con.inputStream)
-            )
-            var inputLine: String?
-            val response = StringBuffer()
-            while (`in`.readLine().also { inputLine = it } != null) {
-                response.append(inputLine)
+            // validating if the text fields are empty or not.
+            if (carVin.isEmpty()) {
+                Toast.makeText(this@VinActivity, "Please enter all the data..", Toast.LENGTH_SHORT)
+                    .show()
+                return@OnClickListener
             }
-            `in`.close()
-            //print in String
-            //System.out.println(response.toString());
-            //Read JSON response and print
-            val myResponse = JSONObject(response.toString())
 
-            println(myResponse.toString())
-            println("result after Reading JSON Response")
-            println(myResponse.getString("data"))
+            // on below line we are calling a method to add new
+            // course to sqlite data and pass all our values to it.
+            dbHandler!!.addNewVin(carVin)
+
+            // after adding the data we are displaying a toast message.
+            Toast.makeText(this@VinActivity , "Vin has been added.", Toast.LENGTH_SHORT).show()
+            carVinEdt.setText("")
+        })
+
+        readCarbtn.setOnClickListener { // opening a new activity via a intent.
+            val i = Intent(this@VinActivity, ViewVins::class.java)
+            startActivity(i)
         }
     }
 }
