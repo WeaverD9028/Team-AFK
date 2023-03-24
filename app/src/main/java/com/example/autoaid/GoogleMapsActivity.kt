@@ -4,17 +4,21 @@ package com.example.autoaid
 
 import android.Manifest
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.Location
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.app.ActivityCompat
 import androidx.core.app.ActivityCompat.OnRequestPermissionsResultCallback
 import androidx.core.content.ContextCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -27,6 +31,7 @@ import com.google.android.gms.maps.GoogleMap.OnMyLocationClickListener
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
+import com.google.android.material.navigation.NavigationView
 
 
 class GoogleMapsActivity : AppCompatActivity(), OnMapReadyCallback,OnMyLocationButtonClickListener,OnRequestPermissionsResultCallback {
@@ -37,6 +42,7 @@ class GoogleMapsActivity : AppCompatActivity(), OnMapReadyCallback,OnMyLocationB
     //private val REQUEST_LOCATION_PERMISSION = 1
     private lateinit var fusedLocationProviderClient: FusedLocationProviderClient
     private val permissionCode = 101
+    lateinit var  toggle : ActionBarDrawerToggle
 
     override fun onCreate(savedInstanceState: Bundle?) {
         lateinit var requestPermission: ActivityResultContracts.RequestPermission
@@ -69,7 +75,33 @@ class GoogleMapsActivity : AppCompatActivity(), OnMapReadyCallback,OnMyLocationB
                     // decision.
                 }
             }*/
+        val drawerLayout : DrawerLayout = findViewById(R.id.drawerLayout)
+
+        toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
+        drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        val navView : NavigationView = findViewById(R.id.nav_view)
+
+        navView.setNavigationItemSelectedListener {
+
+            when(it.itemId){
+
+                R.id.nav_home -> Toast.makeText(applicationContext, "Click home", Toast.LENGTH_SHORT).show()
+                R.id.nav_view -> Toast.makeText(applicationContext, "Click view", Toast.LENGTH_SHORT).show()
+                R.id.nav_videos -> startActivity(Intent(this@GoogleMapsActivity,YouTubeActivity::class.java))
+                R.id.nav_local -> startActivity(Intent(this@GoogleMapsActivity,GoogleMapsActivity::class.java))
+                R.id.nav_share -> Toast.makeText(applicationContext, "Click share", Toast.LENGTH_SHORT).show()
+                R.id.nav_review -> Toast.makeText(applicationContext, "Click review", Toast.LENGTH_SHORT).show()
+                R.id.nav_setting -> startActivity(Intent(this@GoogleMapsActivity,SettingsActivity::class.java))
+                R.id.nav_login -> Toast.makeText(applicationContext, "Click login", Toast.LENGTH_SHORT).show()
+            }
+            true
+        }
     }
+
     @SuppressLint("MissingPermission")
     private fun getUserCurrentLocation() {
         if(ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) !=
@@ -191,9 +223,22 @@ class GoogleMapsActivity : AppCompatActivity(), OnMapReadyCallback,OnMyLocationB
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
         //mMap.setOnMyLocationButtonClickListener(this)
         //mMap.setOnMyLocationClickListener(this)*/
+
     }
 
     override fun onMyLocationButtonClick(): Boolean {
         return false
     }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        if(toggle.onOptionsItemSelected(item)){
+
+            return true
+        }
+        return super.onOptionsItemSelected(item)
+
+
+    }
+
 }
