@@ -6,11 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".SearchIssues">
 
-    <SearchView
+    <android.widget.SearchView
         android:id="@+id/searchid"
         android:layout_width="297dp"
         android:layout_height="53dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="56dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,4 +25,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ListView
+        android:id="@+id/carSymptoms"
+        android:layout_width="298dp"
+        android:layout_height="301dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchid" />
 </androidx.constraintlayout.widget.ConstraintLayout>

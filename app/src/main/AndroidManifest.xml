@@ -77,6 +77,7 @@
         <activity android:name=".MenuActivity" />
         <activity android:name=".VehicleIssues" />
         <activity android:name=".SearchIssues" />
+        <activity android:name=".CarHealthActivity" />
         <activity android:name=".GoogleMapsActivity" />
         <activity android:name=".ViewVins" />
         <activity android:name=".UpdateVinActivity" />
