@@ -20,7 +20,8 @@
       android:textSize="16sp"
       android:textStyle="bold" />
 
-  <!--load gif insertion-->
+  //load gif insertion
+  
   <pl.droidsonroids.gif.GifImageView
       android:id="@+id/carLoadGif"
       android:layout_width="match_parent"
@@ -38,8 +39,9 @@
       android:layout_centerHorizontal="true"
       android:layout_marginBottom="200dp"
       android:fontFamily="@font/warming_medium"
-      android:gravity="center_horizontal"
+      android:gravity="center"
       android:text="Creating your diagonstic..."
+      android:textAlignment="center"
       android:textSize="16sp" />
 
   <Button
@@ -49,9 +51,15 @@
       android:layout_alignParentStart="true"
       android:layout_alignParentBottom="true"
       android:layout_centerHorizontal="true"
-      android:layout_marginStart="99dp"
-      android:layout_marginBottom="85dp"
-      android:text="Continue" />
+      android:layout_marginStart="139dp"
+      android:layout_marginBottom="83dp"
+      android:gravity="center"
+      android:paddingLeft="24dp"
+      android:paddingTop="12dp"
+      android:paddingRight="24dp"
+      android:paddingBottom="12dp"
+      android:text="Continue"
+      android:textSize="20sp" />
 
 
 </RelativeLayout>
