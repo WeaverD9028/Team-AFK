@@ -13,14 +13,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_main)
-        val button = findViewById<Button>(R.id.btn_loginpage)
+        val button = findViewById<Button>(R.id.startBtn)
         // When button is clicked -> launch the login page
         button.setOnClickListener()
         {
             Toast.makeText(this@MainActivity,"Going to login page",Toast.LENGTH_LONG).show()
 
         // Take to the login page
-        startActivity(Intent(this@MainActivity, Diagnostic::class.java))
+        startActivity(Intent(this@MainActivity, LoginActivity::class.java))
         }
     }
 
