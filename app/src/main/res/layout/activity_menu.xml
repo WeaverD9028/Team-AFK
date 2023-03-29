@@ -25,59 +25,21 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="114dp"
-            android:layout_height="39dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="176dp"
-            android:entries="@array/Year"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/spinner3" />
-
-        <Spinner
-            android:id="@+id/spinner4"
-            android:layout_width="114dp"
-            android:layout_height="39dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="176dp"
-            android:entries="@array/Make"
-            android:spinnerMode="dropdown"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/spinner3"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Spinner
-            android:id="@+id/spinner3"
-            android:layout_width="114dp"
-            android:layout_height="39dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="176dp"
-            android:entries="@array/Model"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/spinner"
-            app:layout_constraintHorizontal_bias="0.458"
-            app:layout_constraintStart_toEndOf="@+id/spinner4" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="210dp"
             android:layout_height="40dp"
-            android:layout_marginStart="100dp"
-            android:layout_marginBottom="336dp"
+            android:layout_marginStart="108dp"
+            android:layout_marginTop="17dp"
             android:fontFamily="@font/warming_medium"
             android:gravity="center"
             android:text="I drive a..."
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="@color/grey"
-            app:layout_constraintBottom_toTopOf="@+id/spinner4"
-            app:layout_constraintStart_toStartOf="parent" />
-
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
         <Button
             android:id="@+id/button2"
@@ -99,14 +61,13 @@
             android:id="@+id/imageView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="93dp"
+            android:layout_marginTop="100dp"
             android:layout_marginEnd="76dp"
-            android:layout_marginBottom="72dp"
+            android:layout_marginBottom="50dp"
             android:foregroundGravity="center"
-            app:layout_constraintBottom_toTopOf="@+id/spinner3"
+            app:layout_constraintBottom_toTopOf="@+id/Vintxt"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2"
-            app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/blankcar" />
 
         <EditText
@@ -119,7 +80,7 @@
             android:autofillHints="Ford"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="@string/Vin"
+            android:hint="@string/vin_number"
             app:layout_constraintBottom_toTopOf="@+id/button2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.444"
