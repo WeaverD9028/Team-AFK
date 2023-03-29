@@ -56,7 +56,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".SignupActivity"
+            android:name=".VinActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
