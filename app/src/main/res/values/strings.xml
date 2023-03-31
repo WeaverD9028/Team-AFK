@@ -76,5 +76,6 @@
     <string name="reportsEx2">Date: 1/28/2022 \nTime: 5:30:12\nReported: Having trouble steering when turning the vehicle\nCar: 2021 Jeep Cherokee</string>
     <string name="reportsEx3">Date: 10/15/2021 \nTime: 7:10:05\nReported: Car thermostat reporting high temperatures\nCar: 2005 Chevrolet Tahoe</string>
     <string name="vin_number">Vin Number</string>
+    <string name="title_activity_home_page">HomePage</string>
 
 </resources>

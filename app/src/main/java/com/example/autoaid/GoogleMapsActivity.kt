@@ -9,12 +9,10 @@ import android.content.pm.PackageManager
 import android.location.Location
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.app.ActivityCompat
 import androidx.core.app.ActivityCompat.OnRequestPermissionsResultCallback
 import androidx.core.content.ContextCompat
@@ -28,7 +26,6 @@ import com.google.android.gms.maps.model.MarkerOptions
 import com.example.autoaid.databinding.ActivityGoogleMapsBinding
 import com.google.android.gms.maps.GoogleMap.OnMyLocationButtonClickListener
 import com.google.android.gms.maps.GoogleMap.OnMyLocationClickListener
-import com.google.android.material.snackbar.Snackbar
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.material.navigation.NavigationView
@@ -56,25 +53,7 @@ class GoogleMapsActivity : AppCompatActivity(), OnMapReadyCallback,OnMyLocationB
         getUserCurrentLocation()
 
 
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
 
-        /*val requestPermissionLauncher =
-            registerForActivityResult(
-                ActivityResultContracts.RequestPermission()
-            ) { isGranted: Boolean ->
-                if (isGranted) {
-                    Log.i("Permission: ", "Granted")
-                    // Permission is granted. Continue the action or workflow in your
-                    // app.
-                } else {
-                    Log.i("Permission: ", "Denied")
-                    // Explain to the user that the feature is unavailable because the
-                    // feature requires a permission that the user has denied. At the
-                    // same time, respect the user's decision. Don't link to system
-                    // settings in an effort to convince the user to change their
-                    // decision.
-                }
-            }*/
         val drawerLayout : DrawerLayout = findViewById(R.id.drawerLayout)
 
         toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
@@ -115,24 +94,6 @@ class GoogleMapsActivity : AppCompatActivity(), OnMapReadyCallback,OnMyLocationB
             )
             return
         }
-            /*if (ActivityCompat.checkSelfPermission(
-                this,
-                android.Manifest.permission.ACCESS_FINE_LOCATION
-            ) !=
-            PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
-                this,
-                android.Manifest.permission.ACCESS_COARSE_LOCATION
-            ) !=
-            PackageManager.PERMISSION_GRANTED
-        ) {
-            // Request permission
-            ActivityCompat.requestPermissions(
-                this,
-                arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION),
-                permissionCode
-            )
-            return
-        }*/
 
 
         fusedLocationProviderClient.lastLocation.addOnSuccessListener { location ->
@@ -152,34 +113,6 @@ class GoogleMapsActivity : AppCompatActivity(), OnMapReadyCallback,OnMyLocationB
             }
         }
     }
-
-    /*@SuppressLint("MissingPermission")
-    fun requestPermission() {
-        var required_permissions = "Accept or deny"
-        val mySnackbar = Snackbar.make(
-            findViewById(R.id.myCoordinatorLayout),
-            required_permissions,
-            Snackbar.LENGTH_INDEFINITE
-        )
-        mySnackbar.show()
-        if (
-            ContextCompat.checkSelfPermission(
-                this.applicationContext,
-                Manifest.permission.ACCESS_FINE_LOCATION
-            ) == PackageManager.PERMISSION_GRANTED
-        ) {
-            mMap.isMyLocationEnabled = true
-            return
-        } else {
-            ActivityCompat.requestPermissions(
-                this,
-                arrayOf<String>(Manifest.permission.ACCESS_FINE_LOCATION),
-                REQUEST_LOCATION_PERMISSION
-            )
-
-        }
-    }*/
-
 
 
     override fun onRequestPermissionsResult(
