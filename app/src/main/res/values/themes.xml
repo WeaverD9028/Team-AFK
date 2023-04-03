@@ -14,12 +14,15 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <!-- Splash Screen -->
+    <style name="Splash" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    </style>
+
     <style name="Theme.AutoAid.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
     <style name="Theme.AutoAid.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
     <style name="Theme.AutoAid.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
