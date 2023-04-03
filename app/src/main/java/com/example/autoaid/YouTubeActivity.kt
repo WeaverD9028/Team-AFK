@@ -27,7 +27,7 @@ class YouTubeActivity : AppCompatActivity() {
 
         webViewBuild.webViewClient = WebViewClient()
         webViewBuild.apply {
-            loadUrl("https://www.youtube.com/@chrisfix/videos")
+            loadUrl("https://www.youtube.com/results?search_query=2009+Nissan+Versa+1.7+flat+tire")
             settings.javaScriptEnabled = true
             settings.safeBrowsingEnabled = true
         }

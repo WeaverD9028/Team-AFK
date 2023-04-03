@@ -75,5 +75,46 @@
     <string name="reportsEx1">Date: 12/17/2022 \nTime: 12:46:00\nReported: Squealing noises, uneasy stops\nCar: 2021 Jeep Cherokee</string>
     <string name="reportsEx2">Date: 1/28/2022 \nTime: 5:30:12\nReported: Having trouble steering when turning the vehicle\nCar: 2021 Jeep Cherokee</string>
     <string name="reportsEx3">Date: 10/15/2021 \nTime: 7:10:05\nReported: Car thermostat reporting high temperatures\nCar: 2005 Chevrolet Tahoe</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="large_text">
+       <b>Project Name:</b> AutoAid\n\n
+        <b>Project Description</b>\n
+        AutoAid is an Android app that provides mechanical
+        assistance for vehicles.Once the user creates an
+        account, they can enter their VIN (vehicle identification
+        number) and any current troubles they are experiencing with
+        their vehicle. AutoAid will then access the CarMD API to
+        provide a detailed analysis of the vehicle in relation to
+        the reported issues. The user will receive suggestions on
+        how to fix the problems, along with a cost analysis. If the
+        issues cannot be reasonably identified or resolved by the
+        user, they can also search for local auto shops. The app
+        also includes a feature that allows the user to set
+        reminders for routine maintenance, such as oil changes
+        and tire rotations. This helps the user stay on top of
+        vehicle maintenance and avoid costly repairs down the road.\n
+
+
+        AutoAid is a simple and intuitive resource for those with
+        limited knowledge of vehicle mechanics and troubleshooting,
+        helping them fix their car at home and avoid being
+        overcharged by mechanics. Whether you are inexperienced or
+        an expert, AutoAid gives drivers the confidence to
+        make informed decisions when it comes to vehicle repair.\n
+
+
+        <b>Team Name:</b>
+        Team AFK\n
+        <b>Team Members -(contact info):</b>
+        Keiser Dallas- (keiserdallas@yahoo.com)
+        Daniel Davis- (danielwinston669485@gmail.com)
+        Amiyah Frierson-(amiyahfrierson@outlook.com)
+        Frankie Lavall- (frankielavall15@gmail.com)
+        Dylan Weaver- (weaverd9028@gmail.com)\n
+        <b>Project Sponsor:</b>
+        Dr. Miguel Gates\n
+
+    </string>
+    <string name="action_settings">Settings</string>
 
 </resources>
