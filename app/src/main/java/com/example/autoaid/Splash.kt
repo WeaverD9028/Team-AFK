@@ -15,8 +15,7 @@ class Splash : AppCompatActivity() {
 
         //start main activity after 2s
         Handler(Looper.getMainLooper()).postDelayed(2000){
-            startActivity(Intent(this@Splash, MainActivity::class.java))
+            startActivity(Intent(this@Splash, SignupActivity::class.java))
         }
-
     }
 }
