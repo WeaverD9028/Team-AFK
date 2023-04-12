@@ -12,100 +12,80 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Spinner
-            android:id="@+id/spinner4"
-            android:layout_width="114dp"
-            android:layout_height="39dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="244dp"
-            android:entries="@array/Make"
-            android:spinnerMode="dropdown"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/spinner3"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Spinner
-            android:id="@+id/spinner3"
-            android:layout_width="114dp"
-            android:layout_height="39dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="244dp"
-            android:entries="@array/Model"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/spinner"
-            app:layout_constraintHorizontal_bias="0.458"
-            app:layout_constraintStart_toEndOf="@+id/spinner4" />
-
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="338dp"
-            android:layout_height="77dp"
+            android:layout_width="336dp"
+            android:layout_height="97dp"
             android:layout_marginTop="38dp"
-            android:layout_marginBottom="335dp"
-            android:text="Tell Us About Your Vehicle!"
+            android:text="@string/tell_us_about_your_vehicle"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="26sp"
-            app:layout_constraintBottom_toTopOf="@+id/spinner4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.058" />
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="114dp"
-            android:layout_height="39dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="244dp"
-            android:entries="@array/Year"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/spinner3" />
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="97dp"
-            android:layout_height="101dp"
-            android:layout_marginStart="72dp"
-            android:layout_marginTop="104dp"
-            android:layout_marginBottom="192dp"
-            android:text="You Drive a........"
+            android:layout_width="210dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="108dp"
+            android:layout_marginTop="17dp"
+            android:fontFamily="@font/warming_medium"
+            android:gravity="center"
+            android:text="I drive a..."
+            android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            app:layout_constraintBottom_toTopOf="@+id/spinner4"
+            android:textColor="@color/grey"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2"
-            app:layout_constraintVertical_bias="0.217"
-            tools:text="You Drive a......." />
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="196dp"
-            android:layout_height="62dp"
+            android:layout_height="75dp"
             android:layout_marginStart="156dp"
             android:layout_marginEnd="145dp"
-            android:layout_marginBottom="108dp"
+            android:layout_marginBottom="52dp"
+            android:fontFamily="@font/warming_extrabold"
+
             android:text="Continue"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.569"
+            app:layout_constraintHorizontal_bias="0.534"
             app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="93dp"
+            android:layout_marginTop="100dp"
             android:layout_marginEnd="76dp"
-            android:layout_marginBottom="72dp"
-            app:layout_constraintBottom_toTopOf="@+id/spinner3"
+            android:layout_marginBottom="50dp"
+            android:foregroundGravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/Vintxt"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2"
-            app:layout_constraintVertical_bias="0.3"
             app:srcCompat="@drawable/blankcar" />
+
+        <EditText
+            android:id="@+id/Vintxt"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="128dp"
+            android:layout_marginEnd="141dp"
+            android:layout_marginBottom="44dp"
+            android:autofillHints="Ford"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/vin_number"
+            app:layout_constraintBottom_toTopOf="@+id/button2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="LabelFor" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

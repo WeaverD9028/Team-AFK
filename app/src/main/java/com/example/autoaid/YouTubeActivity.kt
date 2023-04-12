@@ -1,54 +1,37 @@
 package com.example.autoaid
 
-import android.app.Notification.Action
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.widget.Button
+import android.annotation.SuppressLint
 import android.content.Intent
-import android.view.View
-import kotlinx.android.synthetic.main.activity_menu.*
+import android.os.Build
+import android.os.Bundle
 import android.view.MenuItem
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
-import com.google.firebase.auth.FirebaseAuth
-import com.example.autoaid.LoginActivity
 
-
-class MenuActivity : AppCompatActivity() {
+class YouTubeActivity : AppCompatActivity() {
 
     lateinit var  toggle : ActionBarDrawerToggle
-
-
+    @SuppressLint("SetJavaScriptEnabled")
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_menu)
+        setContentView(R.layout.activity_you_tube)
 
-        val user = FirebaseAuth.getInstance().currentUser
-        user?.let {
-            // Name, email address, and profile photo Url
-            val name = user.displayName
-            val email = user.email
-            val photoUrl = user.photoUrl
+        val webViewBuild = findViewById<WebView>(R.id.web_view)
 
-            // Check if user's email is verified
-            val emailVerified = user.isEmailVerified
-
-            // The user's ID, unique to the Firebase project. Do NOT use this value to
-            // authenticate with your backend server, if you have one. Use
-            // FirebaseUser.getToken() instead.
-            val uid = user.uid
+        webViewBuild.webViewClient = WebViewClient()
+        webViewBuild.apply {
+            loadUrl("https://www.youtube.com/@chrisfix/videos")
+            settings.javaScriptEnabled = true
+            settings.safeBrowsingEnabled = true
         }
-
-
-        button2.setOnClickListener {
-            // Navigate to Symptoms page
-            startActivity(Intent(this@MenuActivity,SymptomsActivity::class.java))
-        }
-
         val drawerLayout : DrawerLayout = findViewById(R.id.drawerLayout)
-        val navView : NavigationView = findViewById(R.id.nav_view)
 
         toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
         drawerLayout.addDrawerListener(toggle)
@@ -56,28 +39,24 @@ class MenuActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+        val navView : NavigationView = findViewById(R.id.nav_view)
+
         navView.setNavigationItemSelectedListener {
 
             when(it.itemId){
 
                 R.id.nav_home -> Toast.makeText(applicationContext, "Click home", Toast.LENGTH_SHORT).show()
                 R.id.nav_view -> Toast.makeText(applicationContext, "Click view", Toast.LENGTH_SHORT).show()
-                R.id.nav_videos -> startActivity(Intent(this@MenuActivity,YouTubeActivity::class.java))
-                R.id.nav_local -> startActivity(Intent(this@MenuActivity,GoogleMapsActivity::class.java))
+                R.id.nav_videos -> startActivity(Intent(this@YouTubeActivity,YouTubeActivity::class.java))
+                R.id.nav_local -> startActivity(Intent(this@YouTubeActivity,GoogleMapsActivity::class.java))
                 R.id.nav_share -> Toast.makeText(applicationContext, "Click share", Toast.LENGTH_SHORT).show()
                 R.id.nav_review -> Toast.makeText(applicationContext, "Click review", Toast.LENGTH_SHORT).show()
-                R.id.nav_setting -> startActivity(Intent(this@MenuActivity,SettingsActivity::class.java))
+                R.id.nav_setting -> startActivity(Intent(this@YouTubeActivity,SettingsActivity::class.java))
                 R.id.nav_login -> Toast.makeText(applicationContext, "Click login", Toast.LENGTH_SHORT).show()
             }
-
             true
-
-
         }
     }
-
-
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         if(toggle.onOptionsItemSelected(item)){

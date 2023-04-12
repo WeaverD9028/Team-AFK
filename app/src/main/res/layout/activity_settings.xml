@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/drawerLayout"
     tools:context=".SettingsActivity"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="16dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="-16dp"
+            tools:ignore="UseSwitchCompatOrMaterialXml">
 
         <TextView
             android:id="@+id/titletext3"
@@ -50,88 +54,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/settingTitle" />
 
-        <Switch
-            android:id="@+id/notiToggle"
-            android:layout_width="320dp"
-            android:layout_height="32dp"
-            android:layout_marginStart="45dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="46dp"
-            android:checked="true"
-            android:fontFamily="@font/warming_semibold"
-            android:scaleX="1"
-            android:scaleY="1"
-            android:text="Notifications"
-            android:textScaleX="1"
-            android:textSize="26sp"
-            android:thumbTint="#40C4FF"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4"
-            tools:text="Notifications" />
-
-        <TextView
-            android:id="@+id/locationBlurb"
-            android:layout_width="320dp"
-            android:layout_height="47dp"
-            android:layout_marginStart="45dp"
-            android:layout_marginTop="9dp"
-            android:layout_marginEnd="46dp"
-            android:fontFamily="@font/warming_regular"
-            android:text="Use your location to find autoshops near you. (OFF)"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/locationToggle" />
-
-        <TextView
-            android:id="@+id/notiBlurb"
-            android:layout_width="320dp"
-            android:layout_height="47dp"
-            android:layout_marginStart="45dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="46dp"
-            android:fontFamily="@font/warming_regular"
-            android:text="Receive reminders for regular car maintenance. (ON)"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/notiToggle" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="252dp"
-            android:layout_height="27dp"
-            android:layout_marginStart="80dp"
-            android:layout_marginTop="64dp"
-            android:layout_marginEnd="80dp"
-            android:layout_marginBottom="11dp"
-            android:fontFamily="@font/warming_medium"
-            android:text="Preferences"
-            android:textAlignment="center"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/notiToggle"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-        <Switch
-            android:id="@+id/locationToggle"
-            android:layout_width="320dp"
-            android:layout_height="32dp"
-            android:layout_marginStart="45dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="46dp"
-            android:fontFamily="@font/warming_semibold"
-            android:text="Location Services"
-            android:textSize="26sp"
-            android:thumbTint="#40C4FF"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/notiBlurb"
-            tools:text="Location Services" />
-
         <TextView
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
@@ -140,7 +62,7 @@
             android:layout_marginTop="16dp"
             android:fontFamily="@font/warming_semibold"
             android:text="Edit car information"
-            android:textColor="#40C4FF"
+            android:textColor="#42A5F5"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView8"
@@ -155,7 +77,7 @@
             android:fontFamily="@font/warming_semibold"
             android:text="Edit profile"
             android:textAlignment="textStart"
-            android:textColor="#40C4FF"
+            android:textColor="#42A5F5"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView6"
@@ -169,12 +91,12 @@
             android:layout_marginTop="64dp"
             android:layout_marginEnd="166dp"
             android:layout_marginBottom="7dp"
-            android:tint="#40C4FF"
             app:layout_constraintBottom_toTopOf="@+id/settingTitle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_settings_24" />
+            app:srcCompat="@drawable/ic_baseline_settings_24"
+            app:tint="#40C4FF" />
 
         <TextView
             android:id="@+id/settingTitle"
@@ -184,6 +106,7 @@
             android:layout_marginTop="100dp"
             android:layout_marginEnd="90dp"
             android:fontFamily="@font/warming_bold"
+            android:gravity="center"
             android:text="Settings"
             android:textColor="#000000"
             android:textSize="60sp"
@@ -192,6 +115,14 @@
             app:layout_constraintTop_toBottomOf="@+id/titletext3"
             tools:text="Settings" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"/>
+</androidx.drawerlayout.widget.DrawerLayout>
