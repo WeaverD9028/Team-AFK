@@ -9,6 +9,7 @@
 
     <application
         android:allowBackup="true"
+        android:usesCleartextTraffic="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -16,7 +17,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AutoAid"
-        android:usesCleartextTraffic="true"
         tools:targetApi="31">
 
         <meta-data
@@ -56,6 +56,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
+
+
+
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -64,6 +68,7 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".VehicleIssues" />
+        <activity android:name=".DiagnosticActivity"/>
         <activity android:name=".SearchIssues" />
         <activity android:name=".YouTubeActivity" />
         <activity android:name=".CarHealthActivity" />

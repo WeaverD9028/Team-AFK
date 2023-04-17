@@ -24,10 +24,17 @@ class YouTubeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_you_tube)
 
         val webViewBuild = findViewById<WebView>(R.id.web_view)
+        val vin = intent.getStringExtra("Vin")
+        val description = intent.getStringExtra("Description")
+        val make = intent.getStringExtra("Make")
+        val model = intent.getStringExtra("Model")
+        val year = intent.getStringExtra("Year")
+
+        println("$vin $description")
 
         webViewBuild.webViewClient = WebViewClient()
         webViewBuild.apply {
-            loadUrl("https://www.youtube.com/@chrisfix/videos")
+            loadUrl("https://www.youtube.com/results?search_query=$make+$model+$year+${description}")
             settings.javaScriptEnabled = true
             settings.safeBrowsingEnabled = true
         }
