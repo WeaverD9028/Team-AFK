@@ -12,7 +12,7 @@ import java.util.Calendar
 import kotlin.random.Random
 
 
-class Diagnostic : AppCompatActivity() {
+class Diagnostic : AppCompatActivity() {/*
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_diagnostic)
@@ -28,7 +28,7 @@ class Diagnostic : AppCompatActivity() {
         val issueList: EditText = findViewById(R.id.issues)
 
         // Variable for price EditText
-        val estPrice: EditText = findViewById(R.id.price)
+        val estPrice: EditText = findViewById(R.id.priceTV)
 
         // Variable for location services button
         // This button should take you to the location page (Google Map API)
@@ -137,5 +137,5 @@ class Diagnostic : AppCompatActivity() {
     private fun showDate(date:String,space:TextView){
         space.text = "Date: ".plus(date)
     }
-
+*/
 } // End of class

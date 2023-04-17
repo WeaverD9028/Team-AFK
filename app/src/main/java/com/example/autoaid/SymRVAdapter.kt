@@ -18,8 +18,10 @@ import java.util.ArrayList
 class SymRVAdapter // constructor
     (// variable for our array list and context
     private val symModalArrayList: ArrayList<RepairModel>,
-    private val context: Context
-) : RecyclerView.Adapter<SymRVAdapter.ViewHolder>() {
+    private val context: Context,
+    ) : RecyclerView.Adapter<SymRVAdapter.ViewHolder>() {
+
+    private lateinit var dbHandler : DBHandler
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.symptom_rv_item, parent, false)
         return ViewHolder(view)
@@ -42,18 +44,14 @@ class SymRVAdapter // constructor
             val i = Intent(context, DiagnosticActivity::class.java)
 
 
-
             // below we are passing all our values.
             i.putExtra("Vin", carVin)
             i.putExtra("Description", symDescription)
             i.putExtra("Code", symCode)
 
-            println(symModalArrayList[position].descriptionCode)
-            reportinfo(position).start()
-
 
             // starting our activity.
-            // context.startActivity(i)
+            context.startActivity(i)
         })
     }
 
@@ -77,49 +75,4 @@ class SymRVAdapter // constructor
 
         }
     }
-
-    fun reportinfo(position: Int): Thread{
-        println(symModalArrayList[position].descriptionCode)
-
-        return Thread {
-
-            val url = "http://api.carmd.com/v3.0/repairinfo?repair_code=" + symModalArrayList[position].descriptionCode
-            val obj = URL(url)
-            val con = obj.openConnection() as HttpURLConnection
-            // optional default is GET
-            con.requestMethod = "GET"
-            //add request header
-            con.setRequestProperty("Content-Type", "application/json")
-            con.setRequestProperty("Authorization", "Basic ZjhjODkwN2MtOWRkMy00ZjkzLWIxM2MtZGIyZTM2NTlhMzFk")
-            con.setRequestProperty("partner-token", "db6ef5ce8fd14fcd808057ae6f4c001e")
-            val responseCode = con.responseCode
-            println("\nSending 'GET' request to URL : $url")
-            println("Response Code : $responseCode")
-            val `in` = BufferedReader(
-                InputStreamReader(con.inputStream)
-            )
-            var inputLine: String?
-            val response = StringBuffer()
-            while (`in`.readLine().also { inputLine = it } != null) {
-                response.append(inputLine)
-            }
-            `in`.close()
-            //print in String
-            //System.out.println(response.toString());
-            //Read JSON response and print
-            val myResponse = JSONObject(response.toString())
-
-            // println(myResponse.toString())
-            println("result after Reading JSON Response")
-            //println(myResponse.getString("data"))
-            //println(myResponse.getString("data"))
-            var data = myResponse.getString("data")
-            println(data)
-
-
-
-        }
-
     }
-
-}
