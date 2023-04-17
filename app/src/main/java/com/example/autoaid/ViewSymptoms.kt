@@ -29,7 +29,7 @@ class ViewSymptoms : AppCompatActivity() {
         symModalArrayList = dbHandler.readSym()
 
         // on below line passing our array list to our adapter class.
-        symRVAdapter = SymRVAdapter(symModalArrayList!!, this)
+        symRVAdapter = SymRVAdapter(symModalArrayList!!, this@ViewSymptoms)
         symsRV = findViewById(R.id.idRVSymptoms)
 
         // setting layout manager for our recycler view.

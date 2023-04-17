@@ -56,7 +56,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".SignupActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -76,6 +76,7 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".VehicleIssues" />
+        <activity android:name=".DiagnosticActivity"/>
         <activity android:name=".SearchIssues" />
         <activity android:name=".YouTubeActivity" />
         <activity android:name=".CarHealthActivity" />
