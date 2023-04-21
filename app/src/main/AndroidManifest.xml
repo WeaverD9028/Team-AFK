@@ -29,7 +29,7 @@
             android:name=".Splash"
             android:exported="true">
 
-            <!-- start app on Splash -->
+            <!-- START APP ON SPLASH SCREEN -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -69,7 +69,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".SignupActivity"
+            android:name=".VinActivity"
             android:exported="false">
 
             <!-- Uncomment if Splash Screen doesn't work
@@ -82,6 +82,8 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
+        <activity android:name=".MainActivity" />
 
         <activity android:name=".SymptomsActivity" />
         <activity android:name=".LoginActivity" />

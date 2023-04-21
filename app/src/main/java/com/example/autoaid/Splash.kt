@@ -1,11 +1,14 @@
 package com.example.autoaid
 
+import android.os.Bundle
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import android.os.Handler
 import android.os.Looper
 import androidx.core.os.postDelayed
+
 
 class Splash : AppCompatActivity() {
 
@@ -13,9 +16,14 @@ class Splash : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        //start main activity after 2s
-        Handler(Looper.getMainLooper()).postDelayed(2000){
-            startActivity(Intent(this@Splash, SignupActivity::class.java))
+        //for hiding all bars
+        val controller = WindowInsetsControllerCompat(window, window.decorView)
+        controller.hide(WindowInsetsCompat.Type.systemBars())
+
+        //start main activity after 3s
+        Handler(Looper.getMainLooper()).postDelayed(3000){
+            startActivity(Intent(this@Splash, MainActivity::class.java))
         }
+
     }
 }

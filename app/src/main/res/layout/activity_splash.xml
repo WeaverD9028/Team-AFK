@@ -10,7 +10,7 @@
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="150dp"
         android:scaleX="0.75"
         android:scaleY="0.75"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,7 +22,6 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="320dp"
         android:fontFamily="@font/warming_extrabold"
         android:gravity="center"
         android:text="AutoAid"
@@ -31,7 +30,7 @@
         android:textSize="60sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <TextView
         android:id="@+id/textView9"
@@ -50,12 +49,14 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <ImageView
-        android:id="@+id/footerImg"
-        android:layout_width="425dp"
-        android:layout_height="248dp"
-        android:layout_marginBottom="-50dp"
+        android:id="@+id/imageView5"
+        android:layout_width="649dp"
+        android:layout_height="890dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/footer" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.949"
+        app:srcCompat="@drawable/splashwaves" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,6 +10,8 @@
     <color name="primary_color">#00C9BB</color>
     <color name="grey">#888888</color>
     <color name="light_grey">#F0F0F0</color>
+    <color name="autoaid_blue">#40C4FF</color>
+    <color name="soft_black">#181818</color>
     <color name="red">#FF0000</color>
     <color name="underline">#BDB8B8</color>
 </resources>
