@@ -12,15 +12,35 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseAuth
+import com.example.autoaid.LoginActivity
 
 
 class MenuActivity : AppCompatActivity() {
 
     lateinit var  toggle : ActionBarDrawerToggle
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
+
+        val user = FirebaseAuth.getInstance().currentUser
+        user?.let {
+            // Name, email address, and profile photo Url
+            val name = user.displayName
+            val email = user.email
+            val photoUrl = user.photoUrl
+
+            // Check if user's email is verified
+            val emailVerified = user.isEmailVerified
+
+            // The user's ID, unique to the Firebase project. Do NOT use this value to
+            // authenticate with your backend server, if you have one. Use
+            // FirebaseUser.getToken() instead.
+            val uid = user.uid
+        }
+
 
         button2.setOnClickListener {
             // Navigate to Symptoms page
@@ -42,9 +62,11 @@ class MenuActivity : AppCompatActivity() {
 
                 R.id.nav_home -> Toast.makeText(applicationContext, "Click home", Toast.LENGTH_SHORT).show()
                 R.id.nav_view -> Toast.makeText(applicationContext, "Click view", Toast.LENGTH_SHORT).show()
+                R.id.nav_videos -> startActivity(Intent(this@MenuActivity,YouTubeActivity::class.java))
+                R.id.nav_local -> startActivity(Intent(this@MenuActivity,GoogleMapsActivity::class.java))
                 R.id.nav_share -> Toast.makeText(applicationContext, "Click share", Toast.LENGTH_SHORT).show()
                 R.id.nav_review -> Toast.makeText(applicationContext, "Click review", Toast.LENGTH_SHORT).show()
-                R.id.nav_setting -> Toast.makeText(applicationContext, "Click setting", Toast.LENGTH_SHORT).show()
+                R.id.nav_setting -> startActivity(Intent(this@MenuActivity,SettingsActivity::class.java))
                 R.id.nav_login -> Toast.makeText(applicationContext, "Click login", Toast.LENGTH_SHORT).show()
             }
 
@@ -52,6 +74,8 @@ class MenuActivity : AppCompatActivity() {
 
         }
     }
+
+
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 

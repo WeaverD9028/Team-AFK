@@ -18,10 +18,18 @@
         android:id="@+id/nav_local"
         android:icon="@drawable/wrench_icon"
         android:title="Local Autoshops" />
+
     <item
         android:id="@+id/nav_glossary"
         android:icon="@drawable/glossary_icon_black"
         android:title="Glossary" />
+
+    <item
+        android:id="@+id/nav_videos"
+        android:icon="@drawable/roundedbutton"
+        android:title="DIY Videos"/>
+
+
     <item android:title="Profile">
 
         <menu>

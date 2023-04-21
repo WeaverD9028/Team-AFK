@@ -86,8 +86,12 @@
         <activity android:name=".SymptomsActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".MenuActivity" />
+        <activity android:name=".HomePage" />
         <activity android:name=".VehicleIssues" />
+        <activity android:name=".DiagnosticActivity"/>
         <activity android:name=".SearchIssues" />
+        <activity android:name=".YouTubeActivity" />
+        <activity android:name=".CarHealthActivity" />
         <activity android:name=".GoogleMapsActivity" />
         <activity android:name=".ViewVins" />
         <activity android:name=".UpdateVinActivity" />

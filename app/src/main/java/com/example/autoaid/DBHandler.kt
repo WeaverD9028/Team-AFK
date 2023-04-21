@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
 class DBHandler  // creating a constructor for our database handler.
-    (context: Context?) :
+    (context: Context) :
     SQLiteOpenHelper(context, DB_NAME, null, DB_VERSION) {
     // below method is for creating a database by running a sqlite query
     override fun onCreate(db: SQLiteDatabase) {
@@ -35,7 +35,8 @@ class DBHandler  // creating a constructor for our database handler.
                 + ID_COL + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + VIN_COL + " TEXT,"
                 + SYM_COL + " TEXT,"
-                + CODE_COL + " TEXT)")
+                + CODE_COL + " TEXT,"
+                + COST_COL + " TEXT)")
 
 
         // at last we are calling a exec sql
@@ -43,6 +44,7 @@ class DBHandler  // creating a constructor for our database handler.
         db.execSQL(query)
         db.execSQL(carquery)
         db.execSQL(symptomquery)
+        db.execSQL(diagnosticquery)
     }
 
     fun readMaster(): ArrayList<AllDataModel>{
@@ -118,10 +120,10 @@ class DBHandler  // creating a constructor for our database handler.
         // database for reading our database.
         val db = this.readableDatabase
 
-        val col_vin = "mysymptom.vin"
+        val col_vin = "vin"
 
         // on below line we are creating a cursor with query to read data from database.
-        val cursorInfos = db.rawQuery("SELECT * FROM $TABLE_NAME3 WHERE $col_vin = $carVin ", null)
+        val cursorInfos = db.rawQuery("SELECT * FROM $TABLE_NAME3 WHERE $col_vin = $carVin", null)
 
         // on below line we are creating a new array list.
         val symModalArrayList = ArrayList<RepairModel>()
@@ -143,6 +145,7 @@ class DBHandler  // creating a constructor for our database handler.
         // at last closing our cursor
         // and returning our array list.
         cursorInfos.close()
+        println(carVin)
         return symModalArrayList
     }
 
@@ -242,7 +245,7 @@ class DBHandler  // creating a constructor for our database handler.
         return infoModalArrayList
     }
 
-    // this method is use to add new course to our sqlite database.
+    // this method is use to add new vin to our sqlite database.
     fun addNewVin(
         carVin: String?,
     ) {
@@ -269,6 +272,8 @@ class DBHandler  // creating a constructor for our database handler.
         // database after adding database.
         db.close()
     }
+
+
 
     // we have created a new method for reading all the courses.
     fun readVin(): ArrayList<CarModel> {
@@ -320,11 +325,86 @@ class DBHandler  // creating a constructor for our database handler.
         db.close()
     }
 
+    // this method is use to add new vin to our sqlite database.
+    fun addNewDiagnotic(
+        carVin: String?,
+        carSym: String?,
+        carCode: String?,
+        carCost: String?,
+    ) {
+
+        // on below line we are creating a variable for
+        // our sqlite database and calling writable method
+        // as we are writing data in our database.
+        val db = this.writableDatabase
+
+        // on below line we are creating a
+        // variable for content values.
+        val values = ContentValues()
+
+        // on below line we are passing all values
+        // along with its key and value pair.
+        values.put(VIN_COL, carVin)
+        values.put(SYM_COL, carSym)
+        values.put(CODE_COL, carCode)
+        values.put(COST_COL, carCost)
+
+
+        // after adding all values we are passing
+        // content values to our table.
+        db.insert(TABLE_NAME4, null, values)
+
+        // at last we are closing our
+        // database after adding database.
+        db.close()
+    }
+
+    // we have created a new method for reading certain symptoms.
+    fun readSpecficDia(carCode: String?): ArrayList<diagnoticModel> {
+        // on below line we are creating a
+        // database for reading our database.
+        val db = this.readableDatabase
+
+        val col_code = "code"
+
+        val CODE = '"' + "$carCode" + '"'
+
+
+
+        // on below line we are creating a cursor with query to read data from database.
+        val cursorInfos = db.rawQuery("SELECT * FROM $TABLE_NAME4 WHERE $col_code = $CODE", null)
+
+        // on below line we are creating a new array list.
+        val diagModalArrayList = ArrayList<diagnoticModel>()
+
+        // moving our cursor to first position.
+        if (cursorInfos.moveToFirst()) {
+            do {
+                // on below line we are adding the data from cursor to our array list.
+                diagModalArrayList.add(
+                    diagnoticModel(
+                        cursorInfos.getString(1),
+                        cursorInfos.getString(2),
+                        cursorInfos.getString(3),
+                        cursorInfos.getString(4),
+                    )
+                )
+            } while (cursorInfos.moveToNext())
+            // moving our cursor to next.
+        }
+        // at last closing our cursor
+        // and returning our array list.
+        cursorInfos.close()
+        println(carCode)
+        return diagModalArrayList
+    }
+
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         // this method is called to check if the table exists already.
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME)
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME2)
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME3)
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME4)
         onCreate(db)
     }
 
@@ -334,7 +414,7 @@ class DBHandler  // creating a constructor for our database handler.
         private const val DB_NAME = "vin.db"
 
         // below int is our database version
-        private const val DB_VERSION = 2
+        private const val DB_VERSION = 3
 
         // below variable is for our table name.
         private const val TABLE_NAME = "myvin"
@@ -372,18 +452,8 @@ class DBHandler  // creating a constructor for our database handler.
         // below variable is for our code of the repair column
         private const val CODE_COL = "code"
 
-        // below variable is for our time of the repair column
-        private const val REPAIR_HOUR_COL = "hour"
-
         // below variable is for our code of the repair column
         private const val COST_COL = "cost"
-
-        // below variable is for our code of the repair column
-        private const val PART_COL = "part"
-
-
-
-
 
     }
 }

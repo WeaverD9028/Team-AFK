@@ -66,11 +66,11 @@ class SymptomsActivity :AppCompatActivity(){
         Toast.makeText(this@SymptomsActivity, msg, Toast.LENGTH_SHORT).show()
     }
 
-    companion object {
+    /*companion object {
         //In order to use the spinner we need a list of options to display in the drop down
         val allIssues = arrayOf("NONE", "FLAT TIRES", "SQUEAKY OR GRINDY BREAKS", "CAR WILL NOT START", "SHAKY STEERING WHEEL",
             "NOISY ENGINE", "A/C ISSUES", "WARNING LIGHT(S)")
-    }
+    }*/
 
 }
 

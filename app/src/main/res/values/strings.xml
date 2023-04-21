@@ -75,5 +75,10 @@
     <string name="reportsEx1">Date: 12/17/2022 \nTime: 12:46:00\nReported: Squealing noises, uneasy stops\nCar: 2021 Jeep Cherokee</string>
     <string name="reportsEx2">Date: 1/28/2022 \nTime: 5:30:12\nReported: Having trouble steering when turning the vehicle\nCar: 2021 Jeep Cherokee</string>
     <string name="reportsEx3">Date: 10/15/2021 \nTime: 7:10:05\nReported: Car thermostat reporting high temperatures\nCar: 2005 Chevrolet Tahoe</string>
+    <string name="vin_number">Vin Number</string>
+    <string name="title_activity_home_page">HomePage</string>
+    <string name="title_activity_item_detail_host">ItemDetailHostActivity</string>
+    <string name="title_item_list">Items</string>
+    <string name="title_item_detail">Item Detail</string>
 
 </resources>
