@@ -13,7 +13,6 @@ import com.google.android.material.navigation.NavigationView
 
 class SettingsActivity : AppCompatActivity() {
 
-
     lateinit var  toggle : ActionBarDrawerToggle
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -55,7 +54,6 @@ class SettingsActivity : AppCompatActivity() {
             return true
         }
         return super.onOptionsItemSelected(item)
-
     }
 
 }

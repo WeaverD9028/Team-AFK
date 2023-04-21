@@ -72,7 +72,6 @@ class MenuActivity : AppCompatActivity() {
 
             true
 
-
         }
     }
 
@@ -85,9 +84,6 @@ class MenuActivity : AppCompatActivity() {
             return true
         }
         return super.onOptionsItemSelected(item)
-
-
     }
-
 
 }
