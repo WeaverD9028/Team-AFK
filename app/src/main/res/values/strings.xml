@@ -33,16 +33,21 @@
     </string-array>
 
     <string name="sign_in">Sign in</string>
-    <string name="username">Username</string>
+    <string name="username">Email</string>
     <string name="password">password</string>
     <string name="Password">Password</string>
     <string name="nonmemberPrompt">Not a member, sign up here!</string>
     <string name="confirm_password">Confirm Password</string>
-    <string name="sign_up">Sign Up</string>
-    <string name="alreadyMember">Already a member? Sign in</string>
+    <string name="sign_up">Create an account.</string>
+    <string name="sign_up_button">Sign Up</string>
+    <string name="sign_up_blurb">Sign up today. Take control of your car maintenance.</string>
+    <string name="alreadyMember">Already a member? Sign in.</string>
+    <string name="guest_login">Continue as guest →</string>
+
     <string name="title_activity_google_maps">GoogleMapsActivity</string>
     <string name="title_activity_search_issues">SearchIssues</string>
     <string name="title_activity_car_health">CarHealthActivity</string>
+
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>

@@ -7,16 +7,21 @@ import android.widget.Toast
 import android.content.Intent
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import com.google.firebase.auth.FirebaseAuth
 
 
 class SignupActivity: AppCompatActivity() {
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
+
+        //hides navigation bar
+        val controller = WindowInsetsControllerCompat(window, window.decorView)
+        controller.hide(WindowInsetsCompat.Type.navigationBars())
+        controller.systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
 
         // Create button variable for 'sign up button'
         val button:Button = findViewById(R.id.signUpBtn)
@@ -24,6 +29,9 @@ class SignupActivity: AppCompatActivity() {
         val button2:TextView = findViewById(R.id.prompt)
         // Grab current state of authentication database
         val firebaseAuth:FirebaseAuth = FirebaseAuth.getInstance()
+
+        // Create variable for 'continue as a guest'
+        val guestButton:TextView = findViewById(R.id.guest_button)
 
 
         // Set listener for 'sign up' button
@@ -60,6 +68,12 @@ class SignupActivity: AppCompatActivity() {
         button2.setOnClickListener(){
             // Navigate back to login page
             startActivity(Intent(this@SignupActivity,LoginActivity::class.java))
+        }
+
+        // Set click listener for 'continue as guest' button
+        guestButton.setOnClickListener(){
+            //Navigate to VIN activity
+            startActivity(Intent(this@SignupActivity, HomePage::class.java))
         }
     }
 }

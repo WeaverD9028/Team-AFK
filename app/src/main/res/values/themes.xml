@@ -11,8 +11,10 @@
         <item name="colorOnSecondary">@color/soft_black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+
     </style>
 
     <style name="Theme.AutoAid.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="Theme.AutoAid.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>

@@ -16,13 +16,14 @@ class Splash : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        //for hiding all bars
+        //hides status and navigational bar
         val controller = WindowInsetsControllerCompat(window, window.decorView)
         controller.hide(WindowInsetsCompat.Type.systemBars())
+        controller.systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
 
-        //start main activity after 3s
-        Handler(Looper.getMainLooper()).postDelayed(3000){
-            startActivity(Intent(this@Splash, MainActivity::class.java))
+        //start main activity after 2s
+        Handler(Looper.getMainLooper()).postDelayed(2500){
+            startActivity(Intent(this@Splash, LoginActivity::class.java))
         }
 
     }

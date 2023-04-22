@@ -7,6 +7,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import android.widget.TextView
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import com.google.firebase.auth.FirebaseAuth
 
 
@@ -16,6 +18,11 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        //hides navigation bar
+        val controller = WindowInsetsControllerCompat(window, window.decorView)
+        controller.hide(WindowInsetsCompat.Type.navigationBars())
+        controller.systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
 
         // Create variable for login button
         val button: Button = findViewById(R.id.loginBtn)
@@ -42,7 +49,7 @@ class LoginActivity : AppCompatActivity() {
                     if(it.isSuccessful){
                         Toast.makeText(this@LoginActivity,"Login successful",Toast.LENGTH_LONG).show()
                         // Navigate to the next activity
-                        startActivity(Intent(this@LoginActivity,MenuActivity::class.java))
+                        startActivity(Intent(this@LoginActivity,HomePage::class.java))
                     }else{
                         Toast.makeText(this@LoginActivity,"Incorrect username and password. Try again",Toast.LENGTH_LONG).show()
                     }

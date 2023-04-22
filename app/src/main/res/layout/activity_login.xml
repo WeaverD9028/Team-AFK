@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/loginbackground"
-    android:padding="0dp"
+    android:background="@null"
+    android:foreground="@null"
     android:textAlignment="center"
     tools:context=".LoginActivity">
 
@@ -19,36 +19,50 @@
 
     <!-- Prompt new users to sign up-->
 
-    <ImageView
-        android:id="@+id/whiteforeground"
-        android:layout_width="432dp"
-        android:layout_height="856dp"
-        android:scaleX="1"
-        android:scaleY="1.2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/loginforeground" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="15dp">
+        android:background="@null">
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-110dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/roadshot_2" />
+
+        <ImageView
+            android:id="@+id/whiteforeground"
+            android:layout_width="513dp"
+            android:layout_height="885dp"
+            android:scaleX="1"
+            android:scaleY="1.2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.697"
+            app:srcCompat="@drawable/loginforeground_compressed" />
 
         <EditText
             android:id="@+id/username"
-            android:layout_width="325dp"
+            android:layout_width="310dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="50dp"
             android:layout_marginEnd="8dp"
             android:autofillHints="@string/username"
             android:fontFamily="@font/warming_regular"
             android:hint="@string/username"
             android:inputType="text"
-            android:textSize="22sp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/password"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -56,10 +70,10 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/loginBtn"
-            android:layout_width="325dp"
+            android:layout_width="300dp"
             android:layout_height="60dp"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="32dp"
             android:background="@drawable/roundedbutton"
             android:backgroundTint="#40C4FF"
@@ -68,7 +82,7 @@
             android:text="@string/sign_in"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
-            android:textSize="24sp"
+            android:textSize="22sp"
             app:layout_constraintBottom_toTopOf="@+id/notMember"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.484"
@@ -78,16 +92,16 @@
 
         <TextView
             android:id="@+id/welcome"
-            android:layout_width="325dp"
-            android:layout_height="58dp"
-            android:layout_marginTop="270dp"
+            android:layout_width="310dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="210dp"
             android:layout_marginBottom="4dp"
             android:fontFamily="@font/warming_bold"
             android:gravity="left"
             android:text="Welcome back."
             android:textAlignment="viewStart"
-            android:textColor="@color/black"
-            android:textSize="40sp"
+            android:textColor="@color/soft_black"
+            android:textSize="33sp"
             app:layout_constraintBottom_toTopOf="@+id/username"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.514"
@@ -97,14 +111,14 @@
 
         <TextView
             android:id="@+id/logintagline"
-            android:layout_width="325dp"
+            android:layout_width="310dp"
             android:layout_height="53dp"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
             android:fontFamily="@font/warming_regular"
             android:text="Log in to get back to your car maintence projects."
-            android:textSize="22sp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/username"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.516"
@@ -117,33 +131,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="80dp"
-            android:layout_marginBottom="56dp"
+            android:layout_marginBottom="65dp"
             android:fontFamily="@font/warming_semibold"
-            android:text="@string/nonmemberPrompt"
+            android:text="Not a member? Sign up here."
             android:textAlignment="center"
-            android:textColor="@color/material_dynamic_neutral50"
+            android:textColor="@color/grey"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/loginBtn"
-            tools:text="Not a member? Sign up here." />
+            app:layout_constraintTop_toBottomOf="@+id/loginBtn" />
 
         <EditText
             android:id="@+id/password"
-            android:layout_width="325dp"
+            android:layout_width="310dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="2dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="25dp"
             android:autofillHints="@string/Password"
             android:fontFamily="@font/warming_regular"
             android:hint="@string/Password"
             android:inputType="textPassword"
-            android:textSize="22sp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/loginBtn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -165,6 +176,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
