@@ -61,10 +61,10 @@ class UpdateVinActivity : AppCompatActivity() {
                 )
 
             // displaying a toast message that our course has been updated.
-            Toast.makeText(this@UpdateVinActivity, "Vin Updated..", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@UpdateVinActivity, "VIN updated.", Toast.LENGTH_SHORT).show()
 
             // launching our main activity.
-            val i = Intent(this@UpdateVinActivity, MainActivity::class.java)
+            val i = Intent(this@UpdateVinActivity, ViewVins::class.java)
             startActivity(i)
 
             println("UPDATED")

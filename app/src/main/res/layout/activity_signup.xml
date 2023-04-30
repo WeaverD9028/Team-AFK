@@ -91,7 +91,7 @@
             android:id="@+id/greet"
             android:layout_width="310dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="180dp"
             android:fontFamily="@font/warming_bold"
             android:text="@string/sign_up"
             android:textAlignment="textStart"

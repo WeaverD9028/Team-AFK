@@ -15,152 +15,202 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:id="@+id/linearLayout3">
 
             <ImageView
                 android:id="@+id/wrench_logo"
-                android:layout_width="match_parent"
-                android:layout_height="194dp"
-                app:srcCompat="@drawable/wrench_icon" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/wrench_icon"
+                tools:layout_conversion_absoluteHeight="194dp"
+                tools:layout_editor_absoluteY="0dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_conversion_absoluteWidth="411dp" />
 
             <TextView
                 android:id="@+id/carMakeTV"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:text="Make: "
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                tools:layout_conversion_absoluteHeight="27dp"
+                tools:layout_editor_absoluteY="194dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_conversion_absoluteWidth="411dp" />
 
 
             <TextView
                 android:id="@+id/carModelTV"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:text="Model: "
                 android:textColor="@color/black"
-                />
+                tools:layout_conversion_absoluteHeight="27dp"
+                tools:layout_editor_absoluteY="221dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_conversion_absoluteWidth="411dp" />
 
             <TextView
                 android:id="@+id/carYearTV"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
                 android:text="Year: "
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                tools:layout_conversion_absoluteHeight="27dp"
+                tools:layout_editor_absoluteY="248dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_conversion_absoluteWidth="411dp" />
 
             <TextView
                 android:id="@+id/carVin"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
                 android:text="VIN: "
                 android:textColor="@color/black"
-                android:textSize="20sp"/>
+                android:textSize="20sp"
+                tools:layout_conversion_absoluteHeight="27dp"
+                tools:layout_editor_absoluteY="315dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_conversion_absoluteWidth="411dp" />
 
 
             <TextView
                 android:id = "@+id/carVinTV"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:inputType="textMultiLine"
                 android:lines = "1"
-                android:scrollbars="vertical"/>
+                android:scrollbars="vertical"
+                tools:layout_conversion_absoluteHeight="27dp"
+                tools:layout_editor_absoluteY="352dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_conversion_absoluteWidth="411dp" />
 
             <TextView
                 android:id="@+id/carCode"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
                 android:text="Code: "
                 android:textColor="@color/black"
-                android:textSize="20sp"/>
+                android:textSize="20sp"
+                tools:layout_conversion_absoluteHeight="27dp"
+                tools:layout_editor_absoluteY="419dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_conversion_absoluteWidth="411dp" />
 
 
             <TextView
                 android:id = "@+id/carCodeTV"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:inputType="textMultiLine"
                 android:lines = "1"
-                android:scrollbars="vertical"/>
+                android:scrollbars="vertical"
+                tools:layout_conversion_absoluteHeight="27dp"
+                tools:layout_editor_absoluteY="456dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_conversion_absoluteWidth="411dp" />
 
             <TextView
                 android:id="@+id/descriptionTV"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
                 android:text="Repair: "
                 android:textColor="@color/black"
-                android:textSize="20sp"/>
+                android:textSize="20sp"
+                tools:layout_conversion_absoluteHeight="27dp"
+                tools:layout_editor_absoluteY="523dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_conversion_absoluteWidth="411dp" />
 
 
             <TextView
                 android:id = "@+id/issues"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:inputType="textMultiLine"
                 android:lines = "1"
-                android:scrollbars="vertical"/>
+                android:scrollbars="vertical"
+                tools:layout_conversion_absoluteHeight="27dp"
+                tools:layout_editor_absoluteY="560dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_conversion_absoluteWidth="411dp" />
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="80dp"
                 android:text="Price Estimate: "
                 android:textColor="@color/black"
-                android:textSize="20sp"/>
+                android:textSize="20sp"
+                tools:layout_conversion_absoluteHeight="27dp"
+                tools:layout_editor_absoluteY="667dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_conversion_absoluteWidth="411dp" />
 
             <TextView
                 android:id = "@+id/priceTV"
-                android:layout_width="136dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
                 android:hint = "$0.00"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                tools:layout_conversion_absoluteHeight="27dp"
+                tools:layout_editor_absoluteY="699dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_conversion_absoluteWidth="136dp" />
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:text="Click here for local mechanics "
                 android:textColor="@color/black"
-                android:textSize="20sp"/>
+                android:textSize="20sp"
+                tools:layout_conversion_absoluteHeight="27dp"
+                tools:layout_editor_absoluteY="746dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_conversion_absoluteWidth="411dp" />
 
             <ImageButton
                 android:id = "@+id/location"
-                android:layout_width="68dp"
-                android:layout_height="66dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="5dp"
-                tools:srcCompat="@drawable/ic_action_name" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:srcCompat="@drawable/ic_action_name"
+                tools:layout_conversion_absoluteHeight="66dp"
+                tools:layout_editor_absoluteY="778dp"
+                tools:layout_editor_absoluteX="20dp"
+                tools:layout_conversion_absoluteWidth="68dp" />
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:text="Click here for DIY videos "
                 android:textColor="@color/black"
-                android:textSize="20sp"/>
+                android:textSize="20sp"
+                tools:layout_conversion_absoluteHeight="27dp"
+                tools:layout_editor_absoluteY="864dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_conversion_absoluteWidth="411dp" />
 
             <ImageButton
                 android:id = "@+id/vid"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-                tools:srcCompat="@drawable/clipboard" />
+                tools:srcCompat="@drawable/clipboard"
+                tools:layout_conversion_absoluteHeight="70dp"
+                tools:layout_editor_absoluteY="896dp"
+                tools:layout_editor_absoluteX="20dp"
+                tools:layout_conversion_absoluteWidth="70dp" />
 
 
 

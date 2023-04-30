@@ -32,6 +32,9 @@
         <item>Shaky Steering Wheel</item>
     </string-array>
 
+    <string name="developers">DEVELOPED BY TEAM AFK</string>
+    <string name="developers_2">Team AFK</string>
+
     <string name="sign_in">Sign in</string>
     <string name="username">Email</string>
     <string name="password">password</string>
@@ -85,5 +88,16 @@
     <string name="title_activity_item_detail_host">ItemDetailHostActivity</string>
     <string name="title_item_list">Items</string>
     <string name="title_item_detail">Item Detail</string>
+
+    <string name="home_blurb">Your guide to your primary vehicle.</string>
+    <string name="home_button">Create New Diagnostic</string>
+    <string name="dummy_vehicle">2020 Toyota Camry</string>
+
+    <string name="vin_title">VIN Entry</string>
+    <string name="vin_blurb">AutoAid uses your VIN to get specific information about your vehicle(s) and create a diagnostic.</string>
+    <string name="disclosure">AutoAid does not share any of our users\' details or information with any third-party corporation.</string>
+    <string name="find_vin"> I can\'t find my VIN. </string>
+    <string name="vin_list_blurb">A list of the VINs you\'ve input.</string>
+    <string name="vin_update_blurb">Update this specific VIN.</string>
 
 </resources>

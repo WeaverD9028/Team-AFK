@@ -11,31 +11,25 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_foreground"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AutoAid"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-        <activity
-            android:name=".Glossary"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+
         <activity
             android:name=".Splash"
             android:exported="true">
 
             <!-- START APP ON SPLASH SCREEN -->
-
+            <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
+            -->
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -69,14 +63,32 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
+        <!-- FOR TESTING INDIVIDUAL ACTIVITIES -->
         <activity
-            android:name=".VinActivity"
-            android:exported="false">
+            android:name=".HomePage"
+            android:exported="true"
+            android:theme="@style/Theme.AutoAidActionBar">
 
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
+        <activity
+            android:name=".Glossary"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
 
         <activity android:name=".MainActivity" />
         <activity android:name=".SignupActivity"/>
@@ -84,7 +96,6 @@
 
         <activity android:name=".SymptomsActivity" />
         <activity android:name=".MenuActivity" />
-        <activity android:name=".HomePage" />
         <activity android:name=".VehicleIssues" />
         <activity android:name=".DiagnosticActivity"/>
         <activity android:name=".SearchIssues" />
@@ -95,6 +106,7 @@
         <activity android:name=".UpdateVinActivity" />
         <activity android:name=".ViewCars" />
         <activity android:name=".ViewSymptoms" />
+        <activity android:name=".ChrisYoutubeActivity" />
     </application>
 
 </manifest>

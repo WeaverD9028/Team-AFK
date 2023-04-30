@@ -1,63 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".UpdateVinActivity">
+    tools:context=".UpdateVinActivity"
+    android:background="@color/autoaid_blue">
 
     <!--Edit text to enter course name-->
-    <EditText
-        android:id="@+id/idEdtCarVin"
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="436dp"
+        android:layout_height="843dp"
+        android:layout_marginTop="-210dp"
+        android:scaleX="1"
+        android:scaleY="1.2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/loginforeground_compressed" />
+
+    <TextView
+        android:id="@+id/vin_entry_title3"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:hint="Enter car vin"
-        android:minHeight="48dp" />
+        android:layout_marginTop="128dp"
+        android:fontFamily="@font/warming_bold"
+        android:text="Update VIN"
+        android:textColor="@color/soft_black"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/warming_medium"
+        android:text="@string/vin_update_blurb"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vin_entry_title3" />
+
+    <TextView
+        android:id="@+id/titletext7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/warming_black"
+        android:gravity="center"
+        android:text="autoaid"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!--button for updating our course-->
-    <Button
-        android:id="@+id/idBtnUpdateVin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="Update Vin"
-        android:textAllCaps="false" />
+
+    <EditText
+        android:id="@+id/idEdtCarVin"
+        android:layout_width="300dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/warming_regular"
+        android:hint="Enter car vin"
+        android:minHeight="48dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <Button
         android:id="@+id/idBtnInfoVin"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="65dp"
+        android:background="@drawable/roundedbutton"
+        android:backgroundTint="@color/autoaid_blue"
+        android:fontFamily="@font/warming_black"
+        android:gravity="center"
         android:text="Add Car Information"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idEdtCarVin" />
 
     <Button
         android:id="@+id/idBtnReadVin"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="65dp"
+        android:background="@drawable/roundedbutton"
+        android:backgroundTint="@color/autoaid_blue"
+        android:fontFamily="@font/warming_black"
+        android:gravity="center"
         android:text="View All Cars In Account"
-        android:textAllCaps="false" />
-
-        <!--android:id="@+id/idBtnReadSymptoms" -->
-    <Button
-        android:id="@+id/idBtnReadSymptoms"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="Add All Symptoms"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idBtnViewSymptoms" />
 
     <Button
         android:id="@+id/idBtnViewSymptoms"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="65dp"
+        android:background="@drawable/roundedbutton"
+        android:backgroundTint="@color/autoaid_blue"
+        android:fontFamily="@font/warming_black"
+        android:gravity="center"
         android:text="View All Symptoms"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idBtnReadSymptoms" />
+
+    <Button
+        android:id="@+id/idBtnReadSymptoms"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="65dp"
+        android:background="@drawable/roundedbutton"
+        android:backgroundTint="@color/autoaid_blue"
+        android:fontFamily="@font/warming_black"
+        android:gravity="center"
+        android:text="Add All Symptoms"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idBtnUpdateVin" />
+
+    <Button
+        android:id="@+id/idBtnUpdateVin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="65dp"
+        android:background="@drawable/roundedbutton"
+        android:backgroundTint="@color/autoaid_blue"
+        android:fontFamily="@font/warming_black"
+        android:gravity="center"
+        android:text="Update Vin"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idBtnInfoVin" />
+
+    <!--android:id="@+id/idBtnReadSymptoms" -->
 
 
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

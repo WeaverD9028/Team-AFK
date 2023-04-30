@@ -20,7 +20,6 @@ class MenuActivity : AppCompatActivity() {
 
     lateinit var  toggle : ActionBarDrawerToggle
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
@@ -41,7 +40,6 @@ class MenuActivity : AppCompatActivity() {
             val uid = user.uid
         }
 
-
         button2.setOnClickListener {
             // Navigate to Symptoms page
             startActivity(Intent(this@MenuActivity,SymptomsActivity::class.java))
@@ -60,7 +58,7 @@ class MenuActivity : AppCompatActivity() {
 
             when(it.itemId){
 
-                R.id.nav_home -> Toast.makeText(applicationContext, "Click home", Toast.LENGTH_SHORT).show()
+                R.id.nav_home -> startActivity(Intent(this@MenuActivity,HomePage::class.java))
                 R.id.nav_view -> Toast.makeText(applicationContext, "Click view", Toast.LENGTH_SHORT).show()
                 R.id.nav_videos -> startActivity(Intent(this@MenuActivity,YouTubeActivity::class.java))
                 R.id.nav_local -> startActivity(Intent(this@MenuActivity,GoogleMapsActivity::class.java))
@@ -74,8 +72,6 @@ class MenuActivity : AppCompatActivity() {
 
         }
     }
-
-
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 

@@ -7,6 +7,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import kotlinx.android.synthetic.main.activity_diagnostic.*
 
 class VinActivity : AppCompatActivity() {
@@ -19,6 +21,11 @@ class VinActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_vin)
+
+        //hides navigation bar
+        val controller = WindowInsetsControllerCompat(window, window.decorView)
+        controller.hide(WindowInsetsCompat.Type.navigationBars())
+        controller.systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
 
         // initializing all our variables.
         carVinEdt = findViewById(R.id.idEdtVin)
@@ -36,7 +43,7 @@ class VinActivity : AppCompatActivity() {
 
             // validating if the text fields are empty or not.
             if (carVin.isEmpty()) {
-                Toast.makeText(this@VinActivity, "Please enter all the data..", Toast.LENGTH_SHORT)
+                Toast.makeText(this@VinActivity, "Please enter a valid VIN.", Toast.LENGTH_SHORT)
                     .show()
                 return@OnClickListener
             }
@@ -46,7 +53,7 @@ class VinActivity : AppCompatActivity() {
             dbHandler!!.addNewVin(carVin)
 
             // after adding the data we are displaying a toast message.
-            Toast.makeText(this@VinActivity , "Vin has been added.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@VinActivity , "Your car has been added!", Toast.LENGTH_SHORT).show()
             carVinEdt.setText("")
         })
 
