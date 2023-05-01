@@ -19,27 +19,39 @@
             android:id="@+id/idTVCarVin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="3dp"
+            android:fontFamily="@font/warming_regular"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
             android:text="Car Vin"
-            android:textColor="@color/black" />
+            android:textColor="@color/grey"
+            android:textSize="14sp" />
 
         <!--text view for our course name-->
         <TextView
             android:id="@+id/idTVCarSymptoms"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="3dp"
+            android:fontFamily="@font/warming_bold"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
             android:text="Car Symptoms"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textSize="16sp" />
 
         <!--text view for our course name-->
         <TextView
             android:id="@+id/idTVSymptonCode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="3dp"
+            android:fontFamily="@font/warming_regular"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
             android:text="Code"
-            android:textColor="@color/black" />
+            android:textColor="@color/grey"
+            android:textSize="16sp" />
 
     </LinearLayout>
 

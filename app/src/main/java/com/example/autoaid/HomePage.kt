@@ -31,7 +31,7 @@ class HomePage : AppCompatActivity() {
         // go to diagnostics page
         val report: Button = findViewById(R.id.btnReport)
         report.setOnClickListener{
-            startActivity(Intent(this@HomePage,DiagnosticActivity::class.java))
+            startActivity(Intent(this@HomePage,VinActivity::class.java))
         }
 
 

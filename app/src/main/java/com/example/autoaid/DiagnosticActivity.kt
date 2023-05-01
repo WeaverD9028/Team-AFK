@@ -78,8 +78,8 @@ class DiagnosticActivity : AppCompatActivity() {
             i.putExtra("Vin", carvinTV.text.toString())
             i.putExtra("Description", descriptionTV.text.toString())
             i.putExtra("Make", carmakeTV.text.toString())
-            i.putExtra("Model", carmakeTV.text.toString())
-            i.putExtra("Year", carmakeTV.text.toString())
+            i.putExtra("Model", carmodelTV.text.toString())
+            i.putExtra("Year", caryearTV.text.toString())
             startActivity(i)
 
         }
@@ -260,6 +260,7 @@ class DiagnosticActivity : AppCompatActivity() {
     }
 
     fun givenAsyncCoroutine_whenStartIt_thenShouldExecuteItInTheAsyncWay(){
+        // Start loading screen activity here
         runBlocking { pause() }
     }
 
