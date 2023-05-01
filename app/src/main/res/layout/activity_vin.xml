@@ -75,7 +75,7 @@
         android:id="@+id/idBtnAddCar"
         android:layout_width="280dp"
         android:layout_height="50dp"
-        android:layout_marginTop="132dp"
+        android:layout_marginTop="124dp"
         android:width="300dp"
         android:height="50dp"
         android:background="@drawable/roundedbutton"
@@ -94,7 +94,7 @@
         android:id="@+id/idEdtVin"
         android:layout_width="280dp"
         android:layout_height="50dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:layout_marginBottom="32dp"
         android:width="250dp"
         android:fontFamily="@font/warming_regular"
@@ -110,7 +110,7 @@
         android:id="@+id/idBtnReadCars"
         android:layout_width="280dp"
         android:layout_height="50dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:width="300dp"
         android:height="50dp"
         android:background="@drawable/roundedbutton"
@@ -124,6 +124,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/idBtnAddCar" />
+
+    <Button
+        android:id="@+id/idBtnReadCars2"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:width="300dp"
+        android:height="50dp"
+        android:background="@drawable/roundedbutton"
+        android:backgroundTint="@color/autoaid_blue"
+        android:fontFamily="@font/warming_black"
+        android:gravity="center"
+        android:text="My Cars"
+        android:textAllCaps="true"
+        android:textColor="@color/light_grey"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idBtnReadCars" />
 
     <ImageView
         android:id="@+id/imageView9"

@@ -89,7 +89,7 @@
     <string name="title_item_list">Items</string>
     <string name="title_item_detail">Item Detail</string>
 
-    <string name="home_blurb">Your guide to your primary vehicle.</string>
+    <string name="home_blurb">AutoAid is your helpful guide to maintaining your vehicle.</string>
     <string name="home_button">Create New Diagnostic</string>
     <string name="dummy_vehicle">2020 Toyota Camry</string>
 
@@ -99,5 +99,8 @@
     <string name="find_vin"> I can\'t find my VIN. </string>
     <string name="vin_list_blurb">A list of the VINs you\'ve input.</string>
     <string name="vin_update_blurb">Update this specific VIN.</string>
+
+    <string name="view_car">Your Car Details</string>
+    <string name="view_car_blurb">A quick reference of your cars with details such as year, make, model, and engine details.</string>
 
 </resources>

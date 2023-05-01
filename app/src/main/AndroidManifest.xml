@@ -70,15 +70,6 @@
             android:exported="true"
             android:theme="@style/Theme.AutoAidActionBar">
 
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-
-        <activity
-            android:name=".Glossary"
-            android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -90,9 +81,18 @@
         </activity>
 
 
+
+
         <activity android:name=".MainActivity" />
         <activity android:name=".SignupActivity"/>
         <activity android:name=".LoginActivity"/>
+
+        <activity android:name=".VinActivity"/>
+        <activity android:name=".ViewVins" />
+        <activity android:name=".UpdateVinActivity" />
+        <activity android:name=".ViewCars" />
+        <activity android:name=".ViewSymptoms" />
+
 
         <activity android:name=".SymptomsActivity" />
         <activity android:name=".MenuActivity" />
@@ -102,10 +102,6 @@
         <activity android:name=".YouTubeActivity" />
         <activity android:name=".CarHealthActivity" />
         <activity android:name=".GoogleMapsActivity" />
-        <activity android:name=".ViewVins" />
-        <activity android:name=".UpdateVinActivity" />
-        <activity android:name=".ViewCars" />
-        <activity android:name=".ViewSymptoms" />
         <activity android:name=".ChrisYoutubeActivity" />
     </application>
 

@@ -15,6 +15,7 @@ class VinActivity : AppCompatActivity() {
     // creating variables for our edittext, button and dbhandler
     private lateinit var carVinEdt : EditText
     private lateinit var addCarBtn : Button
+    private lateinit var goToCars : Button
     private lateinit var readCarbtn : Button
     private lateinit var dbHandler: DBHandler
 
@@ -31,6 +32,7 @@ class VinActivity : AppCompatActivity() {
         carVinEdt = findViewById(R.id.idEdtVin)
         addCarBtn = findViewById(R.id.idBtnAddCar)
         readCarbtn = findViewById(R.id.idBtnReadCars)
+        goToCars = findViewById(R.id.idBtnReadCars2)
 
         // creating a new dbhandler class
         // and passing our context to it.
@@ -59,6 +61,11 @@ class VinActivity : AppCompatActivity() {
 
         readCarbtn.setOnClickListener { // opening a new activity via a intent.
             val i = Intent(this@VinActivity, ViewVins::class.java)
+            startActivity(i)
+        }
+
+        goToCars.setOnClickListener { // opening a new activity via a intent.
+            val i = Intent(this@VinActivity, ViewCars::class.java)
             startActivity(i)
         }
     }

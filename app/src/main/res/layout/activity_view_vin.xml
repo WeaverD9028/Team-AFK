@@ -32,13 +32,14 @@
             android:id="@+id/vin_entry_title2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="128dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="115dp"
             android:fontFamily="@font/warming_bold"
             android:text="Your Vehicles"
             android:textColor="@color/soft_black"
             android:textSize="32sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.244"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -46,8 +47,8 @@
             android:id="@+id/textView14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="4dp"
             android:fontFamily="@font/warming_medium"
             android:text="@string/vin_list_blurb"
             android:textSize="20sp"
@@ -58,11 +59,13 @@
             android:id="@+id/idRVVins"
             android:layout_width="300dp"
             android:layout_height="430dp"
-            android:layout_marginTop="56dp"
+            android:layout_marginTop="24dp"
+            android:fadingEdgeLength="10dp"
+            android:requiresFadingEdge="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/vin_entry_title2">
+            app:layout_constraintTop_toBottomOf="@+id/textView14">
 
         </androidx.recyclerview.widget.RecyclerView>
 

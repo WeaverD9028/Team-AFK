@@ -63,7 +63,7 @@ class UpdateVinActivity : AppCompatActivity() {
             // displaying a toast message that our course has been updated.
             Toast.makeText(this@UpdateVinActivity, "VIN updated.", Toast.LENGTH_SHORT).show()
 
-            // launching our main activity.
+            // back to view vins.
             val i = Intent(this@UpdateVinActivity, ViewVins::class.java)
             startActivity(i)
 
@@ -87,8 +87,8 @@ class UpdateVinActivity : AppCompatActivity() {
 
         // adding on click listener to our information vin button.
         informationCarVinBtn.setOnClickListener(View.OnClickListener {// inside this method we are calling to get information on the vin using the api
+            Toast.makeText(this@UpdateVinActivity, "VIN added to list of cars.", Toast.LENGTH_SHORT).show()
             buttonClick().start()
-
 
         })
 
