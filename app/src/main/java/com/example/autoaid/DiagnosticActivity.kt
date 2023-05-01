@@ -66,7 +66,9 @@ class DiagnosticActivity : AppCompatActivity() {
         val l1 = stringToList(dbHandler!!.readSpecficDia(code).toString())
         val l2 = pickCost(l1)
 
-        priceTV.setText(l2)
+        //priceTV.setText(l1.toString())
+
+        priceTV.setText("$100.00")
 
         btnlocation.setOnClickListener {
             val i = Intent(this@DiagnosticActivity, GoogleMapsActivity::class.java)
