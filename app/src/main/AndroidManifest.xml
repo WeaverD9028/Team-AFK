@@ -87,8 +87,7 @@
         <activity android:name=".UpdateVinActivity" />
         <activity android:name=".ViewCars" />
         <activity android:name=".ViewSymptoms" />
-
-
+        <activity android:name=".ViewSavedReports"/>
         <activity android:name=".SymptomsActivity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".VehicleIssues" />

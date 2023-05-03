@@ -101,6 +101,7 @@
     <string name="vin_update_blurb">Update this specific VIN.</string>
 
     <string name="view_car">Your Car Details</string>
+    <string name="view_saved_report">Your Saved Reports</string>
     <string name="view_car_blurb">A quick reference of your cars with details such as year, make, model, and engine details.</string>
 
     <string name="symptoms_blurb">Find the matching issue with your car.</string>

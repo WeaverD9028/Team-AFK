@@ -13,6 +13,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_menu.*
 import android.view.MenuItem
+import org.joda.time.DateTime
 
 
 class HomePage : AppCompatActivity() {
@@ -20,6 +21,10 @@ class HomePage : AppCompatActivity() {
     lateinit var toggle : ActionBarDrawerToggle
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        println(DateTime().toLocalDate().toString())
+        val hours = DateTime().toLocalTime().toString()
+        println("$hours")
+        println("DANIEL HERE!!!!!!!!!!!!!!!!")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_page)
 
@@ -52,9 +57,10 @@ class HomePage : AppCompatActivity() {
 
                 R.id.nav_home -> startActivity(Intent(this@HomePage,HomePage::class.java))
                 R.id.nav_view -> Toast.makeText(applicationContext, "Click view", Toast.LENGTH_SHORT).show()
+                R.id.nav_reports -> startActivity(Intent(this@HomePage, ViewSavedReports::class.java))
                 R.id.nav_videos -> startActivity(Intent(this@HomePage,ChrisYoutubeActivity::class.java))
                 R.id.nav_local -> startActivity(Intent(this@HomePage,GoogleMapsActivity::class.java))
-                R.id.nav_share -> Toast.makeText(applicationContext, "Click share", Toast.LENGTH_SHORT).show()
+                // R.id.nav_share -> Toast.makeText(applicationContext, "Click share", Toast.LENGTH_SHORT).show()
                 R.id.nav_review -> Toast.makeText(applicationContext, "Click review", Toast.LENGTH_SHORT).show()
                 R.id.nav_setting -> startActivity(Intent(this@HomePage,SettingsActivity::class.java))
                 R.id.nav_login -> Toast.makeText(applicationContext, "Click login", Toast.LENGTH_SHORT).show()

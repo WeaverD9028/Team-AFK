@@ -38,6 +38,18 @@ class DBHandler  // creating a constructor for our database handler.
                 + CODE_COL + " TEXT,"
                 + COST_COL + " TEXT)")
 
+        val savedreportquery = ("CREATE TABLE " + TABLE_NAME5 + " ("
+                + ID_COL + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + DATE_COL + " TEXT,"
+                + TIME_COL + " TEXT,"
+                + MAKE_COL + " TEXT,"
+                + MODEL_COL + " TEXT,"
+                + YEAR_COL + " TEXT,"
+                + VIN_COL + " TEXT,"
+                + SYM_COL + " TEXT,"
+                + CODE_COL + " TEXT,"
+                + COST_COL + " TEXT)")
+
 
         // at last we are calling a exec sql
         // method to execute above sql query
@@ -45,6 +57,7 @@ class DBHandler  // creating a constructor for our database handler.
         db.execSQL(carquery)
         db.execSQL(symptomquery)
         db.execSQL(diagnosticquery)
+        db.execSQL(savedreportquery)
     }
 
     fun readMaster(): ArrayList<AllDataModel>{
@@ -212,7 +225,7 @@ class DBHandler  // creating a constructor for our database handler.
         db.close()
     }
 
-    // we have created a new method for reading all the courses.
+    // we have created a new method for reading all cars.
     fun readCar(): ArrayList<InfoModel> {
         // on below line we are creating a
         // database for reading our database.
@@ -243,6 +256,88 @@ class DBHandler  // creating a constructor for our database handler.
         // and returning our array list.
         cursorInfos.close()
         return infoModalArrayList
+    }
+
+    fun addSavedReport(
+                        date : String?,
+                        time : String?,
+                        carMake: String?,
+                       carModel: String?,
+                       carYear: String?,
+                       carVin: String?,
+                       carSym: String?,
+                       carCode: String?,
+                       carCost: String?,
+    ){
+
+        // on below line we are creating a variable for
+        // our sqlite database and calling writable method
+        // as we are writing data in our database.
+        val db = this.writableDatabase
+
+        // on below line we are creating a
+        // variable for content values.
+        val values = ContentValues()
+
+        // on below line we are passing all values
+        // along with its key and value pair.
+        values.put(DATE_COL, date)
+        values.put(TIME_COL, time)
+        values.put(MAKE_COL, carMake)
+        values.put(MODEL_COL, carModel)
+        values.put(YEAR_COL, carYear)
+        values.put(VIN_COL, carVin)
+        values.put(SYM_COL, carSym)
+        values.put(CODE_COL, carCode)
+        values.put(COST_COL, carCost)
+
+
+
+        // after adding all values we are passing
+        // content values to our table.
+        db.insert(TABLE_NAME5, null, values)
+
+        // at last we are closing our
+        // database after adding database.
+        db.close()
+    }
+
+    // we have created a new method for reading all the saved reports.
+    fun readReports(): ArrayList<SavedReportModel> {
+        // on below line we are creating a
+        // database for reading our database.
+        val db = this.readableDatabase
+
+        // on below line we are creating a cursor with query to read data from database.
+        val cursorInfos = db.rawQuery("SELECT * FROM " + TABLE_NAME5, null)
+
+        // on below line we are creating a new array list.
+        val savedReportModalArrayList = ArrayList<SavedReportModel>()
+
+        // moving our cursor to first position.
+        if (cursorInfos.moveToFirst()) {
+            do {
+                // on below line we are adding the data from cursor to our array list.
+                savedReportModalArrayList.add(
+                    SavedReportModel(
+                        cursorInfos.getString(1),
+                        cursorInfos.getString(2),
+                        cursorInfos.getString(3),
+                        cursorInfos.getString(4),
+                        cursorInfos.getString(5),
+                        cursorInfos.getString(6),
+                        cursorInfos.getString(7),
+                        cursorInfos.getString(8),
+                        cursorInfos.getString(9),
+                    )
+                )
+            } while (cursorInfos.moveToNext())
+            // moving our cursor to next.
+        }
+        // at last closing our cursor
+        // and returning our array list.
+        cursorInfos.close()
+        return savedReportModalArrayList
     }
 
     // this method is use to add new vin to our sqlite database.
@@ -414,7 +509,7 @@ class DBHandler  // creating a constructor for our database handler.
         private const val DB_NAME = "vin.db"
 
         // below int is our database version
-        private const val DB_VERSION = 3
+        private const val DB_VERSION = 4
 
         // below variable is for our table name.
         private const val TABLE_NAME = "myvin"
@@ -428,6 +523,9 @@ class DBHandler  // creating a constructor for our database handler.
         // below variable is for our table name.
         private const val TABLE_NAME4 = "mydiagnostic"
 
+        // below variable is for our table name.
+        private const val TABLE_NAME5 = "mysavedreports"
+
         // below variable is for our id column.
         private const val ID_COL = "id"
 
@@ -436,6 +534,12 @@ class DBHandler  // creating a constructor for our database handler.
 
         // below variable is for our car make column
         private const val MAKE_COL = "make"
+
+        // below variable is for date
+        private const val DATE_COL = "date"
+
+        // below variable is for time
+        private const val TIME_COL = "time"
 
         // below variable is for our car modal column
         private const val MODEL_COL = "modal"
