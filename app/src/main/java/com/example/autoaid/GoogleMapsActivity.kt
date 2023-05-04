@@ -72,9 +72,6 @@ class GoogleMapsActivity : AppCompatActivity(), OnMapReadyCallback,OnMyLocationB
                 R.id.nav_view -> Toast.makeText(applicationContext, "Click view", Toast.LENGTH_SHORT).show()
                 R.id.nav_videos -> startActivity(Intent(this@GoogleMapsActivity,YouTubeActivity::class.java))
                 R.id.nav_local -> startActivity(Intent(this@GoogleMapsActivity,GoogleMapsActivity::class.java))
-                R.id.nav_share -> Toast.makeText(applicationContext, "Click share", Toast.LENGTH_SHORT).show()
-                R.id.nav_review -> Toast.makeText(applicationContext, "Click review", Toast.LENGTH_SHORT).show()
-                R.id.nav_setting -> startActivity(Intent(this@GoogleMapsActivity,SettingsActivity::class.java))
                 R.id.nav_login -> Toast.makeText(applicationContext, "Click login", Toast.LENGTH_SHORT).show()
             }
             true

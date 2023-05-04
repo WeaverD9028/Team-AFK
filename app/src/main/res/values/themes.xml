@@ -30,4 +30,8 @@
     <style name="Theme.AutoAid.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar" />
     <style name="Theme.AutoAid.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="Menu_Style">
+        <item name="fontFamily">@font/warming_semibold</item>
+    </style>
+
 </resources>

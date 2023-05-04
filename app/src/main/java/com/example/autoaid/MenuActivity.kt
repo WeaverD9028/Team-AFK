@@ -62,9 +62,6 @@ class MenuActivity : AppCompatActivity() {
                 R.id.nav_view -> Toast.makeText(applicationContext, "Click view", Toast.LENGTH_SHORT).show()
                 R.id.nav_videos -> startActivity(Intent(this@MenuActivity,YouTubeActivity::class.java))
                 R.id.nav_local -> startActivity(Intent(this@MenuActivity,GoogleMapsActivity::class.java))
-                R.id.nav_share -> Toast.makeText(applicationContext, "Click share", Toast.LENGTH_SHORT).show()
-                R.id.nav_review -> Toast.makeText(applicationContext, "Click review", Toast.LENGTH_SHORT).show()
-                R.id.nav_setting -> startActivity(Intent(this@MenuActivity,SettingsActivity::class.java))
                 R.id.nav_login -> Toast.makeText(applicationContext, "Click login", Toast.LENGTH_SHORT).show()
             }
 
