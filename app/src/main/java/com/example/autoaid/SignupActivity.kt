@@ -47,7 +47,7 @@ class SignupActivity: AppCompatActivity() {
             // Make sure all fields are full
             if(user.text.toString().isBlank() || pass.text.toString().isBlank() || confirmPass.text.toString().isBlank()){
                 Toast.makeText(this@SignupActivity,"Fill in all required fields",Toast.LENGTH_LONG).show()
-            // Make sure the password and confirmed password match
+                // Make sure the password and confirmed password match
             }else if(pass.text.toString() == confirmPass.text.toString()){
                 // Attempt to create a new user with given information
                 firebaseAuth.createUserWithEmailAndPassword(user.text.toString(),pass.text.toString()).addOnCompleteListener {

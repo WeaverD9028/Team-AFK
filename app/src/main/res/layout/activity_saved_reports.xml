@@ -7,80 +7,248 @@
     android:background="@color/white"
     tools:context=".SavedReports">
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="159dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="640dp"
-        android:fontFamily="@font/warming_extrabold"
-        android:paddingLeft="16dp"
-        android:text="Back"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ScrollView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="125dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
+        <ImageView
+            android:id="@+id/wrench_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/diagnostic_icon"
+            tools:layout_conversion_absoluteHeight="194dp"
+            tools:layout_conversion_absoluteWidth="411dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <TextView
+            android:id="@+id/textView22"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#FFFFFF"
-            android:orientation="vertical"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp">
+            android:fontFamily="@font/warming_bold"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:text="Your Diagnostic"
+            android:textAlignment="center"
+            android:textColor="@color/soft_black"
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/carMakeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/warming_medium"
+            android:text="Make: "
+            android:textColor="@color/soft_black"
+            android:textSize="18sp"
+            tools:layout_conversion_absoluteHeight="27dp"
+            tools:layout_conversion_absoluteWidth="411dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="194dp" />
+
+
+        <TextView
+            android:id="@+id/carModelTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/warming_medium"
+            android:text="Model: "
+            android:textColor="@color/soft_black"
+            android:textSize="18sp"
+            tools:layout_conversion_absoluteHeight="27dp"
+            tools:layout_conversion_absoluteWidth="411dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="221dp" />
+
+        <TextView
+            android:id="@+id/carYearTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/warming_medium"
+            android:text="Year: "
+            android:textColor="@color/soft_black"
+            android:textSize="18sp"
+            tools:layout_conversion_absoluteHeight="27dp"
+            tools:layout_conversion_absoluteWidth="411dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="248dp" />
+
+        <TextView
+            android:id="@+id/carVin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/warming_medium"
+            android:text="VIN: "
+            android:textColor="@color/soft_black"
+            android:textSize="18sp"
+            tools:layout_conversion_absoluteHeight="27dp"
+            tools:layout_conversion_absoluteWidth="411dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="315dp" />
+
+
+        <TextView
+            android:id="@+id/carVinTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/warming_regular"
+            android:inputType="textMultiLine"
+            android:lines="1"
+            android:scrollbars="vertical"
+            android:textColor="@color/soft_black"
+            android:textSize="18sp"
+            tools:layout_conversion_absoluteHeight="27dp"
+            tools:layout_conversion_absoluteWidth="411dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="352dp" />
+
+        <TextView
+            android:id="@+id/carCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/warming_medium"
+            android:text="Code: "
+            android:textColor="@color/soft_black"
+            android:textSize="18sp"
+            tools:layout_conversion_absoluteHeight="27dp"
+            tools:layout_conversion_absoluteWidth="411dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="419dp" />
+
+
+        <TextView
+            android:id="@+id/carCodeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/warming_regular"
+            android:inputType="textMultiLine"
+            android:lines="1"
+            android:scrollbars="vertical"
+            android:textColor="@color/soft_black"
+            android:textSize="18sp"
+            tools:layout_conversion_absoluteHeight="27dp"
+            tools:layout_conversion_absoluteWidth="411dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="456dp" />
+
+        <TextView
+            android:id="@+id/descriptionTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/warming_medium"
+            android:text="Repair: "
+            android:textColor="@color/soft_black"
+            android:textSize="18sp"
+            tools:layout_conversion_absoluteHeight="27dp"
+            tools:layout_conversion_absoluteWidth="411dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="523dp" />
+
+
+        <TextView
+            android:id="@+id/issues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/warming_regular"
+            android:inputType="textMultiLine"
+            android:lines="1"
+            android:scrollbars="vertical"
+            android:textColor="@color/soft_black"
+            android:textSize="18sp"
+            tools:layout_conversion_absoluteHeight="27dp"
+            tools:layout_conversion_absoluteWidth="411dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="560dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
             <TextView
-                android:layout_width="350dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/warming_bold"
-                android:gravity="center"
-                android:text="Your Reports"
-                android:textColor="@color/black"
-                android:textSize="46sp" />
+                android:fontFamily="@font/warming_medium"
+                android:text="Price Estimate: "
+                android:textColor="@color/soft_black"
+                android:textSize="18sp"
+                tools:layout_conversion_absoluteHeight="27dp"
+                tools:layout_conversion_absoluteWidth="411dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="667dp" />
 
             <TextView
-                android:id="@+id/report1"
-                android:layout_width="350dp"
+                android:id="@+id/priceTV"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
                 android:fontFamily="@font/warming_regular"
-                android:text="@string/reportsEx1"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/report2"
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/warming_regular"
-                android:text="@string/reportsEx2"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/report3"
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/warming_regular"
-                android:text="@string/reportsEx3"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-
+                android:hint="$0.00"
+                android:textColor="@color/soft_black"
+                android:textSize="18sp"
+                tools:layout_conversion_absoluteHeight="27dp"
+                tools:layout_conversion_absoluteWidth="136dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="699dp" />
         </LinearLayout>
-    </ScrollView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/warming_medium"
+            android:paddingTop="10dp"
+            android:text="Click here for local mechanics "
+            android:textColor="@color/soft_black"
+            android:textSize="18sp"
+            tools:layout_conversion_absoluteHeight="27dp"
+            tools:layout_conversion_absoluteWidth="411dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="746dp" />
+
+        <ImageButton
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            tools:layout_conversion_absoluteHeight="66dp"
+            tools:layout_conversion_absoluteWidth="68dp"
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="778dp"
+            tools:srcCompat="@drawable/ic_action_name" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/warming_medium"
+            android:paddingTop="10dp"
+            android:text="Click here for DIY videos "
+            android:textColor="@color/soft_black"
+            android:textSize="18sp"
+            tools:layout_conversion_absoluteHeight="27dp"
+            tools:layout_conversion_absoluteWidth="411dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="864dp" />
+
+            <ImageButton
+                android:id="@+id/vid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                tools:layout_conversion_absoluteHeight="50dp"
+                tools:layout_conversion_absoluteWidth="50dp"
+                tools:layout_editor_absoluteX="20dp"
+                tools:layout_editor_absoluteY="896dp"
+                tools:srcCompat="@drawable/clipboard" />
+
+
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -240,11 +240,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            tools:layout_conversion_absoluteHeight="70dp"
-            tools:layout_conversion_absoluteWidth="70dp"
+            tools:layout_conversion_absoluteHeight="50dp"
+            tools:layout_conversion_absoluteWidth="50dp"
             tools:layout_editor_absoluteX="20dp"
             tools:layout_editor_absoluteY="896dp"
             tools:srcCompat="@drawable/clipboard" />
+            -->
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"/>
 
 
     </LinearLayout>

@@ -6,14 +6,17 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.view.menu.MenuView.ItemView
 import kotlinx.android.synthetic.main.activity_diagnostic.*
 import kotlinx.coroutines.delay
 
 import kotlinx.coroutines.runBlocking
+import org.joda.time.DateTime
 import org.json.JSONObject
 import org.w3c.dom.Text
 import java.io.BufferedReader
@@ -34,6 +37,7 @@ class DiagnosticActivity : AppCompatActivity() {
     private lateinit var priceTV : TextView
     private lateinit var  btndiy : ImageButton
     private lateinit var btnlocation : ImageButton
+    private lateinit var btnsave : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         dbHandler = DBHandler(this@DiagnosticActivity)
@@ -50,6 +54,7 @@ class DiagnosticActivity : AppCompatActivity() {
         priceTV = findViewById(R.id.priceTV)
         btndiy = findViewById(R.id.vid)
         btnlocation = findViewById(R.id.location)
+        btnsave = findViewById(R.id.btnSave)
 
 
 
@@ -64,7 +69,7 @@ class DiagnosticActivity : AppCompatActivity() {
         carInformation().start()
         givenAsyncCoroutine_whenStartIt_thenShouldExecuteItInTheAsyncWay()
         val l1 = stringToList(dbHandler!!.readSpecficDia(code).toString())
-        val l2 = pickCost(l1)
+        // val l2 = pickCost(l1)
 
         //priceTV.setText(l1.toString())
 
@@ -85,6 +90,31 @@ class DiagnosticActivity : AppCompatActivity() {
             startActivity(i)
 
         }
+
+        btnsave.setOnClickListener{
+            println(carmakeTV.text)
+            println(carmodelTV.text)
+            println(caryearTV.text)
+            println(carvinTV.text)
+            println(descriptionTV.text)
+            println(carcodeTV.text)
+            println(priceTV.text)
+            val date = DateTime().toLocalDate().toString()
+            val time = DateTime().toLocalTime().toString()
+            dbHandler!!.addSavedReport(date,
+                time,
+                carmakeTV.text.toString(),
+                carmodelTV.text.toString(),
+                caryearTV.text.toString(),
+                carvinTV.text.toString(),
+                descriptionTV.text.toString(),
+                carcodeTV.text.toString(),
+                priceTV.text.toString())
+            Toast.makeText(applicationContext, "Report Saved", Toast.LENGTH_SHORT).show()
+        }
+
+
+
 
 
     }
