@@ -452,6 +452,7 @@ class DBHandler  // creating a constructor for our database handler.
         // at last we are closing our
         // database after adding database.
         db.close()
+        print("ADDED TO DIAGNOITICS TO DATABASE")
     }
 
     // we have created a new method for reading certain symptoms.
@@ -462,7 +463,7 @@ class DBHandler  // creating a constructor for our database handler.
 
         val col_code = "code"
 
-        val CODE = '"' + "$carCode" + '"'
+        val CODE =  '"' + "$carCode" + '"'
 
 
 

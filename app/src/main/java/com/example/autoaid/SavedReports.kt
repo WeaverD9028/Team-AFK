@@ -53,6 +53,17 @@ class SavedReports : AppCompatActivity() {
             startActivity(i)
         }
 
+        btndiy.setOnClickListener {
+            val i = Intent(this@SavedReports, YouTubeActivity::class.java)
+            i.putExtra("Vin", carvin.text.toString())
+            i.putExtra("Description", carsym.text.toString())
+            i.putExtra("Make", carmake.text.toString())
+            i.putExtra("Model", carmodel.text.toString())
+            i.putExtra("Year", caryear.text.toString())
+            startActivity(i)
+
+        }
+
 
     }
 

@@ -24,7 +24,6 @@ import java.io.InputStreamReader
 import java.net.HttpURLConnection
 import java.net.URL
 import java.util.ArrayList
-import java.util.Date
 import kotlin.reflect.typeOf
 
 class DiagnosticActivity : AppCompatActivity() {
@@ -53,10 +52,9 @@ class DiagnosticActivity : AppCompatActivity() {
         carmodelTV = findViewById(R.id.carModelTV)
         caryearTV = findViewById(R.id.carYearTV)
         priceTV = findViewById(R.id.priceTV)
-        //btndiy = findViewById(R.id.vid)
+        btndiy = findViewById(R.id.vid)
         btnlocation = findViewById(R.id.location)
         btnsave = findViewById(R.id.btnSave)
-
 
 
 
@@ -71,16 +69,17 @@ class DiagnosticActivity : AppCompatActivity() {
         carInformation().start()
         givenAsyncCoroutine_whenStartIt_thenShouldExecuteItInTheAsyncWay()
         val l1 = stringToList(dbHandler!!.readSpecficDia(code).toString())
-        val l2 = cleanCost(l1.get(3))
-        println(l2)
-        priceTV.setText(l2)
+        // val l2 = pickCost(l1)
 
+        //priceTV.setText(l1.toString())
+
+        priceTV.setText("$100.00")
 
         btnlocation.setOnClickListener {
             val i = Intent(this@DiagnosticActivity, GoogleMapsActivity::class.java)
             startActivity(i)
         }
-/*
+
         btndiy.setOnClickListener {
             val i = Intent(this@DiagnosticActivity, YouTubeActivity::class.java)
             i.putExtra("Vin", carvinTV.text.toString())
@@ -91,9 +90,6 @@ class DiagnosticActivity : AppCompatActivity() {
             startActivity(i)
 
         }
-
-
- */
 
         btnsave.setOnClickListener{
             println(carmakeTV.text)
@@ -116,6 +112,9 @@ class DiagnosticActivity : AppCompatActivity() {
                 priceTV.text.toString())
             Toast.makeText(applicationContext, "Report Saved", Toast.LENGTH_SHORT).show()
         }
+
+
+
 
 
     }
@@ -285,13 +284,6 @@ class DiagnosticActivity : AppCompatActivity() {
         val cost = l2[0].removeRange(0,9).trim(')')
 
         return cost
-    }
-
-    private fun cleanCost(carcost:String): String{
-        val cost = carcost.removeRange(0,9)
-        var trimCost = cost.trim(')')
-        val newCarCost = "$$trimCost"
-        return newCarCost
     }
 
     suspend fun pause(){
