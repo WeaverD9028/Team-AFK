@@ -3,39 +3,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <item android:title="Navigation">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/home_256"
+        android:title="Home" />
+
+
+    <item
+        android:id="@+id/nav_reports"
+        android:icon="@drawable/car_report_icon"
+        android:title="Diagonistics" />
+
+    <item
+        android:id="@+id/nav_local"
+        android:icon="@drawable/wrench_icon"
+        android:title="Local Autoshops" />
+
+    <item
+        android:id="@+id/nav_glossary"
+        android:icon="@drawable/glossary_icon_black"
+        android:title="Glossary" />
+
+    <item
+        android:id="@+id/nav_videos"
+        android:icon="@drawable/roundedbutton"
+        android:title="DIY Videos"/>
+
+
+    <item android:title="Profile">
+
         <menu>
+
             <item
-                android:id="@+id/nav_home"
-                android:icon="@drawable/home_256"
-                android:title="Home"
-                />
-            <item
-                android:id="@+id/nav_reports"
-                android:icon="@drawable/car_report_icon"
-                android:title="Diagonistics" />
-            <item
-                android:id="@+id/nav_videos"
-                android:icon="@drawable/play_button"
-                android:title="DIY Videos" />
-            <item
-                android:id="@+id/nav_local"
-                android:icon="@drawable/map_icon"
-                android:title="Local Autoshops" />
-            <item
-                android:id="@+id/nav_glossary"
-                android:icon="@drawable/glossary_icon_black"
-                android:title="Glossary" />
-            <item
-                android:id="@+id/nav_health"
-                android:icon="@drawable/car_repair"
+                android:icon="@drawable/heart_icon"
                 android:title="Car Health" />
             <item
                 android:id="@+id/nav_login"
                 android:icon="@drawable/ic_baseline_login_24"
                 android:title="Log Out" />
+
+
         </menu>
     </item>
 
+    <item android:title="Communication">
+
+        <menu>
+
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_baseline_share_24"
+                android:title="Share"/>
+
+            <item
+                android:id="@+id/nav_review"
+                android:icon="@drawable/ic_baseline_rate_review_24"
+                android:title="Rating"/>
+
+        </menu>
+
+    </item>
+    <item
+        android:id="@+id/nav_info"
+        android:icon="@drawable/info_icon"
+        android:title="Information" />
+    <item
+        android:id="@+id/nav_setting"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="Settings" />
 
 </menu>
