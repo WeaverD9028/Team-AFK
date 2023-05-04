@@ -87,8 +87,6 @@
         <activity android:name=".UpdateVinActivity" />
         <activity android:name=".ViewCars" />
         <activity android:name=".ViewSymptoms" />
-
-        <activity android:name=".Glossary"/>
         <activity android:name=".ViewSavedReports"/>
         <activity android:name=".SymptomsActivity" />
         <activity android:name=".MenuActivity" />
@@ -96,10 +94,7 @@
         <activity android:name=".DiagnosticActivity"/>
         <activity android:name=".SearchIssues" />
         <activity android:name=".YouTubeActivity" />
-
-        <activity android:name=".CarHealthActivity"
-            android:theme="@style/Theme.AutoAidActionBar"/>
-
+        <activity android:name=".CarHealthActivity" />
         <activity android:name=".GoogleMapsActivity" />
         <activity android:name=".ChrisYoutubeActivity" />
     </application>
