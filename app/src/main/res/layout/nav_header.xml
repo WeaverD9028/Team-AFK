@@ -9,9 +9,12 @@
     android:background="@color/white">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:src="@drawable/afk"/>
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:adjustViewBounds="false"
+        android:scaleX="1.3"
+        android:scaleY="1.3"
+        android:src="@drawable/splash_icon" />
 
     <TextView
         android:id="@+id/user_name"
@@ -19,9 +22,9 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/warming_bold"
         android:paddingTop="8dp"
-        android:text="Team AFK"
-        android:textColor="@color/black"
-        android:textSize="22dp"
+        android:text="Your Account"
+        android:textColor="@color/soft_black"
+        android:textSize="24sp"
         android:textStyle="bold" />
 
     <TextView
@@ -29,7 +32,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/warming_regular"
         android:text="AFK@gmail.com"
-        android:textSize="16dp" />
+        android:textSize="16sp" />
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"

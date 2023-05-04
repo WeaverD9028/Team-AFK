@@ -37,7 +37,6 @@ class HomePage : AppCompatActivity() {
 
         //menu code
         val drawerLayout : DrawerLayout = findViewById(R.id.drawerLayout)
-        // val drawerLayout : DrawerLayout = findViewById(R.id.drawerLayout)
         val navView : NavigationView = findViewById(R.id.nav_view)
 
         toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
@@ -54,10 +53,9 @@ class HomePage : AppCompatActivity() {
                 R.id.nav_view -> Toast.makeText(applicationContext, "Click view", Toast.LENGTH_SHORT).show()
                 R.id.nav_videos -> startActivity(Intent(this@HomePage,ChrisYoutubeActivity::class.java))
                 R.id.nav_local -> startActivity(Intent(this@HomePage,GoogleMapsActivity::class.java))
-                R.id.nav_share -> Toast.makeText(applicationContext, "Click share", Toast.LENGTH_SHORT).show()
-                R.id.nav_review -> Toast.makeText(applicationContext, "Click review", Toast.LENGTH_SHORT).show()
-                R.id.nav_setting -> startActivity(Intent(this@HomePage,SettingsActivity::class.java))
-                R.id.nav_login -> Toast.makeText(applicationContext, "Click login", Toast.LENGTH_SHORT).show()
+                R.id.nav_glossary -> startActivity(Intent(this@HomePage,Glossary::class.java))
+                R.id.nav_login -> startActivity(Intent(this@HomePage,LoginActivity::class.java))
+                R.id.nav_health -> startActivity(Intent(this@HomePage,CarHealthActivity::class.java))
             }
 
             true
