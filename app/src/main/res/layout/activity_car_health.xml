@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawerLayout"
+    android:background="@color/autoaid_blue"
     tools:context=".CarHealthActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -13,116 +14,216 @@
         android:layout_height="match_parent"
         tools:context=".CarHealthActivity">
 
-    <TextView
-        android:id="@+id/carHealthTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="171dp"
-        android:fontFamily="@font/warming_bold"
-        android:text="Your Vehicle"
-        android:textColor="#000000"
-        android:textSize="60sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Your Vehicle" />
+        <TextView
+            android:id="@+id/titletext11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/warming_black"
+            android:gravity="center"
+            android:text="autoaid"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:id="@+id/imageView18"
+            android:layout_width="436dp"
+            android:layout_height="843dp"
+            android:layout_marginTop="-210dp"
+            android:scaleX="1"
+            android:scaleY="1.2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/loginforeground_compressed" />
 
-    <TextView
-        android:id="@+id/txtdate1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="52dp"
-        android:text="TextView"
-        android:textColor="#2B2929"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/carHealthTitle" />
+        <ImageView
+            android:id="@+id/wrench_logo2"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/titletext11"
+            app:srcCompat="@drawable/diagnostic_icon"
+            tools:layout_conversion_absoluteHeight="194dp"
+            tools:layout_conversion_absoluteWidth="411dp" />
 
-    <EditText
-        android:id="@+id/Oilchangetext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="64dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Oil Change"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/carHealthTitle" />
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/warming_bold"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:text="Car Health"
+            android:textAlignment="center"
+            android:textColor="@color/soft_black"
+            android:textSize="48sp"
+            app:layout_constraintTop_toBottomOf="@+id/wrench_logo2" />
 
-    <EditText
-        android:id="@+id/CoolantLevelsText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Coolant Levels"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Oilchangetext" />
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView28">
 
-    <EditText
-        android:id="@+id/TirePressureText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Tire Pressure"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CoolantLevelsText" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
 
-    <TextView
-        android:id="@+id/txtdate2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="52dp"
-        android:text="TextView"
-        android:textColor="#222020"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtdate1" />
+                <TextView
+                    android:id="@+id/coolText"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/warming_medium"
+                    android:text="Coolant Levels"
+                    android:textColor="@color/soft_black"
+                    android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/txtdate3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="52dp"
-        android:text="TextView"
-        android:textColor="#252424"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtdate2" />
+                <EditText
+                    android:id="@+id/coolDate"
+                    android:layout_width="35dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/roundedbutton"
+                    android:backgroundTint="#3095C3"
+                    android:ems="10"
+                    android:fontFamily="@font/warming_bold"
+                    android:gravity="center"
+                    android:hint="1/1/99"
+                    android:inputType="date"
+                    android:textColor="@color/light_grey"
+                    android:textColorHint="@color/light_grey"
+                    android:textColorLink="@color/light_grey"
+                    android:textSize="20sp" />
+            </LinearLayout>
 
-    <EditText
-        android:id="@+id/TireRotationText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Tire Rotation"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TirePressureText" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
 
-    <TextView
-        android:id="@+id/txtdate4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="52dp"
-        android:text="TextView"
-        android:textColor="#232222"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtdate3" />
+                <TextView
+                    android:id="@+id/oilText"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/warming_medium"
+                    android:text="Oil Change"
+                    android:textColor="@color/soft_black"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/oilDate"
+                    android:layout_width="35dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/roundedbutton"
+                    android:backgroundTint="#3095C3"
+                    android:ems="10"
+                    android:fontFamily="@font/warming_bold"
+                    android:gravity="center"
+                    android:hint="1/1/99"
+                    android:inputType="date"
+                    android:textColor="@color/light_grey"
+                    android:textColorHint="@color/light_grey"
+                    android:textColorLink="@color/light_grey"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/rotationText"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/warming_medium"
+                    android:text="Tire Rotation"
+                    android:textColor="@color/soft_black"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/rotationDate"
+                    android:layout_width="35dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/roundedbutton"
+                    android:backgroundTint="#3095C3"
+                    android:ems="10"
+                    android:fontFamily="@font/warming_bold"
+                    android:gravity="center"
+                    android:hint="1/1/99"
+                    android:inputType="date"
+                    android:textColor="@color/light_grey"
+                    android:textColorHint="@color/light_grey"
+                    android:textColorLink="@color/light_grey"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/pressureText"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/warming_medium"
+                    android:text="Tire Pressure"
+                    android:textColor="@color/soft_black"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/pressureDate"
+                    android:layout_width="35dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/roundedbutton"
+                    android:backgroundTint="#3095C3"
+                    android:ems="10"
+                    android:fontFamily="@font/warming_bold"
+                    android:gravity="center"
+                    android:hint="1/1/99"
+                    android:inputType="date"
+                    android:textColor="@color/light_grey"
+                    android:textColorHint="@color/light_grey"
+                    android:textColorLink="@color/light_grey"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+        </LinearLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

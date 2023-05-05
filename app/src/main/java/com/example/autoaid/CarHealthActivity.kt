@@ -28,10 +28,10 @@ class CarHealthActivity : AppCompatActivity() {
 
         //finding values for dates
        // viewdate = findViewById(R.id.textViewdate)
-        oilDate = findViewById(R.id.txtdate1)
-        coolantDate = findViewById(R.id.txtdate2)
-        rotateDate = findViewById(R.id.txtdate3)
-        pressureDate = findViewById(R.id.txtdate4)
+        oilDate = findViewById(R.id.oilDate)
+        coolantDate = findViewById(R.id.coolDate)
+        rotateDate = findViewById(R.id.rotationDate)
+        pressureDate = findViewById(R.id.pressureDate)
 
         val oilcheck = intent.getStringExtra("date1")
         val coolantcheck = intent.getStringExtra("date2")

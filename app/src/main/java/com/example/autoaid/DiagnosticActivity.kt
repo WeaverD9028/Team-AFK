@@ -12,6 +12,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.view.menu.MenuView.ItemView
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import kotlinx.android.synthetic.main.activity_diagnostic.*
 import kotlinx.coroutines.delay
 
@@ -38,6 +40,7 @@ class DiagnosticActivity : AppCompatActivity() {
     private lateinit var  btndiy : ImageButton
     private lateinit var btnlocation : ImageButton
     private lateinit var btnsave : Button
+    private lateinit var btnHome : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         dbHandler = DBHandler(this@DiagnosticActivity)
@@ -55,6 +58,7 @@ class DiagnosticActivity : AppCompatActivity() {
         btndiy = findViewById(R.id.vid)
         btnlocation = findViewById(R.id.location)
         btnsave = findViewById(R.id.btnSave)
+        btnHome = findViewById(R.id.btnHome)
 
 
 
@@ -75,9 +79,19 @@ class DiagnosticActivity : AppCompatActivity() {
 
         priceTV.setText("$100.00")
 
+        //hides navigation bar
+        val controller = WindowInsetsControllerCompat(window, window.decorView)
+        controller.hide(WindowInsetsCompat.Type.navigationBars())
+        controller.systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+
         btnlocation.setOnClickListener {
             val i = Intent(this@DiagnosticActivity, GoogleMapsActivity::class.java)
             startActivity(i)
+        }
+
+        // go to home page
+        btnHome.setOnClickListener{
+            startActivity(Intent(this@DiagnosticActivity,HomePage::class.java))
         }
 
         btndiy.setOnClickListener {

@@ -64,6 +64,7 @@ class HomePage : AppCompatActivity() {
                 R.id.nav_review -> Toast.makeText(applicationContext, "Click review", Toast.LENGTH_SHORT).show()
                 R.id.nav_setting -> startActivity(Intent(this@HomePage,SettingsActivity::class.java))
                 R.id.nav_login -> startActivity(Intent(this@HomePage, LoginActivity::class.java))
+                R.id.nav_health -> startActivity(Intent(this@HomePage, CarHealthActivity::class.java))
             }
 
             true

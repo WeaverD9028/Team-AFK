@@ -35,6 +35,7 @@
         <menu>
 
             <item
+                android:id="@+id/nav_health"
                 android:icon="@drawable/heart_icon"
                 android:title="Car Health" />
             <item
