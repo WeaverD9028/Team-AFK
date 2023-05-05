@@ -81,7 +81,7 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".SignupActivity"/>
         <activity android:name=".LoginActivity"/>
-
+        <activity android:name=".Glossary"/>
         <activity android:name=".VinActivity"/>
         <activity android:name=".ViewVins" />
         <activity android:name=".UpdateVinActivity" />
