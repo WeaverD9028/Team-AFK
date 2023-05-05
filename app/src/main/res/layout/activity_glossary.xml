@@ -4,7 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/autoaid_blue"
     tools:context=".Glossary">
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="436dp"
+        android:layout_height="843dp"
+        android:layout_marginTop="-210dp"
+        android:scaleX="1"
+        android:scaleY="1.2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/loginforeground_compressed" />
 
     <TextView
         android:id="@+id/titletext6"
@@ -18,7 +31,7 @@
         android:text="autoaid"
         android:textAlignment="center"
         android:textAllCaps="true"
-        android:textColor="@color/grey"
+        android:textColor="@color/light_grey"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,7 +39,7 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp"
@@ -44,7 +57,7 @@
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="120dp"
         android:fontFamily="@font/warming_extrabold"
         android:gravity="center"
         android:text="Glossary"
@@ -70,50 +83,249 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:orientation="vertical"
+        android:layout_height="400dp"
+        android:fadingEdge="vertical"
+        android:requiresFadingEdge="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11">
 
-        <TextView
-            android:id="@+id/textView20"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/warming_semibold"
-            android:paddingTop="0dp"
-            android:paddingBottom="8dp"
-            android:text="Aftermarket"
-            android:textColor="@android:color/holo_blue_dark"
-            android:textSize="24sp" />
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/imageView11"
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:paddingTop="2dp"
-                app:srcCompat="@drawable/dropdown" />
-
-            <TextView
-                android:id="@+id/textView21"
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/warming_regular"
-                android:paddingLeft="5dp"
-                android:paddingBottom="5dp"
-                android:text="Parts which are not made by the original manufacturer. The best aftermarket parts will meet or exceed the quality of the original parts in your vehicle."
-                android:textColor="@color/soft_black"
-                android:textSize="17dp" />
-        </LinearLayout>
+                android:layout_marginTop="24dp"
+                android:orientation="vertical">
 
-    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="24dp"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+                    <TextView
+                        android:id="@+id/anti"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/warming_semibold"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="8dp"
+                        android:text="Anti-Lock Braking System "
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:textSize="24sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/imageView111"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:paddingTop="2dp"
+                            app:srcCompat="@drawable/dropdown" />
+
+                        <TextView
+                            android:id="@+id/anti1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/warming_regular"
+                            android:paddingLeft="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="A braking system that senses when any of the wheels have locked up—or are about to—and automatically reduces the braking forces to keep the wheels rolling. Commonly called ABS, such a system can control all four wheels or only two.  "
+                            android:textColor="@color/soft_black"
+                            android:textSize="17dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/warming_semibold"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="8dp"
+                    android:text="Aftermarket"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="24sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView11"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:paddingTop="2dp"
+                        app:srcCompat="@drawable/dropdown" />
+
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/warming_regular"
+                        android:paddingLeft="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Parts which are not made by the original manufacturer. The best aftermarket parts will meet or exceed the quality of the original parts in your vehicle."
+                        android:textColor="@color/soft_black"
+                        android:textSize="17dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/breakM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/warming_semibold"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="8dp"
+                    android:text="Brake Modulation "
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="24sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView112"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:paddingTop="2dp"
+                        app:srcCompat="@drawable/dropdown" />
+
+                    <TextView
+                        android:id="@+id/breakM1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/warming_regular"
+                        android:paddingLeft="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="The process of varying pedal pressure to hold a car's brakes on the verge of lockup. Ideally, the brakes will unlock with only a slight reduction in the pressure needed to lock them. Typically, however, a considerable pressure reduction is required.  "
+                        android:textColor="@color/soft_black"
+                        android:textSize="17dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/carbon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/warming_semibold"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="8dp"
+                    android:text="Carbon Fiber"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="24sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView113"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:paddingTop="2dp"
+                        app:srcCompat="@drawable/dropdown" />
+
+                    <TextView
+                        android:id="@+id/carbon1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/warming_regular"
+                        android:paddingLeft="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Threadlike strands of pure carbon that are extremely strong in tension (that is, when pulled) and are reasonably flexible. Carbon fiber can be bound in a matrix of plastic resin by heat, vacuum, or pressure to form a composite that is strong and light—and very expensive.  "
+                        android:textColor="@color/soft_black"
+                        android:textSize="17dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/dead"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/warming_semibold"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="8dp"
+                    android:text="Dead Pedal"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="24sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView115"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:paddingTop="2dp"
+                        app:srcCompat="@drawable/dropdown" />
+
+                    <TextView
+                        android:id="@+id/dead1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/warming_regular"
+                        android:paddingLeft="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="A footrest found to the left of the leftmost pedal. It provides a place for the driver to brace his left leg during hard cornering.  "
+                        android:textColor="@color/soft_black"
+                        android:textSize="17dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/engine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/warming_semibold"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="8dp"
+                    android:text="Engine Control System "
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="24sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView116"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:paddingTop="2dp"
+                        app:srcCompat="@drawable/dropdown" />
+
+                    <TextView
+                        android:id="@+id/engine1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/warming_regular"
+                        android:paddingLeft="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="A computerized brain—often called the ECU, for Engine Control Unit—that regulates an engine's operation by monitoring certain engine characteristics (rpm, coolant temperature, intake airflow, etc.) through a network of sensors and then controlling key variables (fuel metering, spark timing, EGR, etc.) according to preprogrammed schedules.  "
+                        android:textColor="@color/soft_black"
+                        android:textSize="17dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,6 +15,15 @@
         tools:context=".HomePage"
         tools:visibility="visible">
 
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/carLoadGif"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/carload" />
+
         <TextView
             android:id="@+id/txtHome"
             android:layout_width="wrap_content"

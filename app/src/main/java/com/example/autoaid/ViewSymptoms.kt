@@ -24,9 +24,11 @@ class ViewSymptoms : AppCompatActivity() {
         symModalArrayList = ArrayList()
         dbHandler = DBHandler(this@ViewSymptoms)
 
+        val carvin = intent.getStringExtra("Vin")
+
         // getting our symptoms array
         // list from db handler class.
-        symModalArrayList = dbHandler.readSym()
+        symModalArrayList = dbHandler.readSpecficSym(carvin)!!
 
         // on below line passing our array list to our adapter class.
         symRVAdapter = SymRVAdapter(symModalArrayList!!, this@ViewSymptoms)

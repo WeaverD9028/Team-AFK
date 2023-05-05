@@ -29,7 +29,7 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -64,7 +64,6 @@
                 android:value="" />
         </activity>
 
-        <!-- FOR TESTING INDIVIDUAL ACTIVITIES -->
         <activity
             android:name=".HomePage"
             android:exported="true"
@@ -90,6 +89,7 @@
         <activity android:name=".SymptomsActivity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".VehicleIssues" />
+        <activity android:name=".Loading" />
         <activity android:name=".DiagnosticActivity"/>
         <activity android:name=".SearchIssues" />
         <activity android:name=".YouTubeActivity" />

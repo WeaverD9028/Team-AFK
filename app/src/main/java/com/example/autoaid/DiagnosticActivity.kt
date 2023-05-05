@@ -73,11 +73,11 @@ class DiagnosticActivity : AppCompatActivity() {
         carInformation().start()
         givenAsyncCoroutine_whenStartIt_thenShouldExecuteItInTheAsyncWay()
         val l1 = stringToList(dbHandler!!.readSpecficDia(code).toString())
-        // val l2 = pickCost(l1)
+        val l2 = pickCost(l1)
 
         //priceTV.setText(l1.toString())
 
-        priceTV.setText("$100.00")
+        priceTV.setText(l2)
 
         //hides navigation bar
         val controller = WindowInsetsControllerCompat(window, window.decorView)
@@ -307,6 +307,8 @@ class DiagnosticActivity : AppCompatActivity() {
 
     fun givenAsyncCoroutine_whenStartIt_thenShouldExecuteItInTheAsyncWay(){
         // Start loading screen activity here
+        //val i = Intent(this@DiagnosticActivity, Loading::class.java)
+        //startActivity(i)
         runBlocking { pause() }
     }
 

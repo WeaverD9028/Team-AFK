@@ -96,6 +96,7 @@ class UpdateVinActivity : AppCompatActivity() {
         viewCarSymptomsBtn.setOnClickListener {
             val i = Intent(this, ViewSymptoms::class.java)
             println("VIEW ALL SYMPTOMS")
+            i.putExtra("Vin", carVin.toString())
             startActivity(i)
         }
 

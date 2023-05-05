@@ -16,7 +16,7 @@
 
     <item
         android:id="@+id/nav_local"
-        android:icon="@drawable/wrench_icon"
+        android:icon="@drawable/map_icon"
         android:title="Local Autoshops" />
 
     <item
@@ -26,40 +26,41 @@
 
     <item
         android:id="@+id/nav_videos"
-        android:icon="@drawable/roundedbutton"
-        android:title="DIY Videos"/>
+        android:icon="@drawable/play_button"
+        android:title="DIY Videos" />
 
 
+    <item
+        android:id="@+id/nav_health"
+        android:icon="@drawable/heart_icon"
+        android:title="Car Health" />
+    <item
+        android:id="@+id/nav_login"
+        android:icon="@drawable/ic_baseline_login_24"
+        android:title="Log Out" />
     <item android:title="Profile">
 
         <menu>
-
-            <item
-                android:id="@+id/nav_health"
-                android:icon="@drawable/heart_icon"
-                android:title="Car Health" />
-            <item
-                android:id="@+id/nav_login"
-                android:icon="@drawable/ic_baseline_login_24"
-                android:title="Log Out" />
 
 
         </menu>
     </item>
 
-    <item android:title="Communication">
+    <item
+        android:title="Communication"
+        android:visible="false">
 
         <menu>
 
             <item
                 android:id="@+id/nav_share"
                 android:icon="@drawable/ic_baseline_share_24"
-                android:title="Share"/>
+                android:title="Share" />
 
             <item
                 android:id="@+id/nav_review"
                 android:icon="@drawable/ic_baseline_rate_review_24"
-                android:title="Rating"/>
+                android:title="Rating" />
 
         </menu>
 
@@ -67,10 +68,12 @@
     <item
         android:id="@+id/nav_info"
         android:icon="@drawable/info_icon"
-        android:title="Information" />
+        android:title="Information"
+        android:visible="false" />
     <item
         android:id="@+id/nav_setting"
         android:icon="@drawable/ic_baseline_settings_24"
-        android:title="Settings" />
+        android:title="Settings"
+        android:visible="false" />
 
 </menu>

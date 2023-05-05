@@ -30,7 +30,7 @@ class Loading : AppCompatActivity() {
 
         //click button moves on to Diagnosis page
         continueButton.setOnClickListener() {
-            val intent = Intent(this,Diagnostic::class.java)
+            val intent = Intent(this,DiagnosticActivity::class.java)
             startActivity(intent)
         }
     }

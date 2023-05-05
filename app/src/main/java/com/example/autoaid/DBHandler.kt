@@ -135,8 +135,10 @@ class DBHandler  // creating a constructor for our database handler.
 
         val col_vin = "vin"
 
+        val VIN = '"' + "$carVin" + '"'
+
         // on below line we are creating a cursor with query to read data from database.
-        val cursorInfos = db.rawQuery("SELECT * FROM $TABLE_NAME3 WHERE $col_vin = $carVin", null)
+        val cursorInfos = db.rawQuery("SELECT * FROM $TABLE_NAME3 WHERE $col_vin = $VIN", null)
 
         // on below line we are creating a new array list.
         val symModalArrayList = ArrayList<RepairModel>()
