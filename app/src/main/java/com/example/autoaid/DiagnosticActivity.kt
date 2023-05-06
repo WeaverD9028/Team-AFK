@@ -77,7 +77,7 @@ class DiagnosticActivity : AppCompatActivity() {
 
         //priceTV.setText(l1.toString())
 
-        priceTV.setText(l2)
+        priceTV.setText("$" +l2)
 
         //hides navigation bar
         val controller = WindowInsetsControllerCompat(window, window.decorView)
