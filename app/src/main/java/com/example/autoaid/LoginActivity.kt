@@ -59,7 +59,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         // Set on click listener for 'not a member button'
-        button2.setOnClickListener(){
+        button2.setOnClickListener{
             startActivity(Intent(this@LoginActivity, SignupActivity::class.java))
         }
 
